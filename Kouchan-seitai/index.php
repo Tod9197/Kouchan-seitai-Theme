@@ -30,6 +30,40 @@
   </div>
 </section>
 
+<!-- 悩み解決 -->
+<section class="resolve">
+  <div class="inner">
+    <h2 class="resolveTitle">こんなお身体の悩みをお持ちではないですか？</h2>
+    <div class="resolveFlex">
+    <ul class="resolveList">
+      <li class="resolveList__item">
+        <i class="fas fa-check-square check-red"></i>
+        <p class="resolveList__itemText">腰痛がひどく立っていても座っていても辛い。</p>
+      </li>
+      <li class="resolveList__item">
+        <i class="fas fa-check-square check-red"></i>
+        <p class="resolveList__itemText">常に肩が凝っていて呼吸も苦しい。</p>
+      </li>
+      <li class="resolveList__item">
+        <i class="fas fa-check-square check-red"></i>
+        <p class="resolveList__itemText">よく頭が痛くなり仕事を休みがち。</p>
+      </li>
+      <li class="resolveList__item">
+        <i class="fas fa-check-square check-red"></i>
+        <p class="resolveList__itemText">加齢と共に身体が重くなってきて疲れが抜けない。</p>
+      </li>
+      <li class="resolveList__item">
+        <i class="fas fa-check-square check-red"></i>
+        <p class="resolveList__itemText">精神的に落ち込むことが増えて物事を純粋に楽しめない</p>
+      </li>
+    </ul>
+    <img class="resolveList__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-05.jpg')) ?>" alt="悩む男性">
+    </div>
+    <p class="resolveText">これらの他にも様々なお身体の症状や悩みをお持ちの方が増えています。</p>
+    <p class="resolveText">今までのその場しのぎの対症療法で</p>
+  </div>
+</section>
+
 
 
   <!-- フッター -->

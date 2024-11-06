@@ -54,3 +54,53 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* <!-- 悩み解決 --> */
+.resolve {
+  padding: 10rem;
+}
+.resolveTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 6rem;
+}
+.resolveFlex {
+  display: flex;
+  margin-bottom: 10rem;
+}
+/* レ点チェック */
+.resolveList {
+  display: flex;
+  flex-direction: column;
+  width: 59%;
+  margin-right: 2rem;
+}
+.resolveList__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.check-red {
+  font-size: 2.4rem;
+  color: red;
+  background-color: transparent;
+  margin-right: 1rem;
+}
+.resolveList__itemText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+.resolveList__img {
+  width: 45%;
+  height: auto;
+}
+.resolveText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
