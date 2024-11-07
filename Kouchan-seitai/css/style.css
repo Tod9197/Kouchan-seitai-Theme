@@ -19,16 +19,30 @@
 }
 .aboutTitle {
   font-family: "Noto Sans JP", "Noto Sans Japanese";
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.aboutTitle::after {
+  position: absolute;
+  display: block;
+  content: "ABOUT";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
 }
 .aboutText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2.4rem;
   letter-spacing: 0.1em;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
 }
 .aboutText__second {
   font-size: 1.6rem;
@@ -103,4 +117,69 @@
   font-size: 2rem;
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+/* 特色 */
+.features {
+  padding: 10rem 0;
+}
+.featuresTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.featuresTitle::after {
+  position: absolute;
+  display: block;
+  content: "FEATURES";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.featuresText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 8rem;
+}
+.featuresList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+.featuresList__item {
+  /* width: 20rem; */
+  /* height: 20rem; */
+}
+.featuresList__itemImg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 300/300;
+  object-fit: cover;
+  padding: 0.5rem;
+  border: 2px solid #ffd79a;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+}
+.featuresList__itemTag {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.featuresList__itemText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.6rem;
+  text-align: left;
+  text-wrap: break-all;
+  line-height: 1.8;
 }

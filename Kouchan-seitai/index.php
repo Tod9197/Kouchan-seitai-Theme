@@ -33,7 +33,7 @@
 <!-- 悩み解決 -->
 <section class="resolve">
   <div class="inner">
-    <h2 class="resolveTitle">こんなお身体の悩みをお持ちではないですか？</h2>
+    <p class="resolveTitle">こんなお身体の悩みをお持ちではないですか？</p>
     <div class="resolveFlex">
     <ul class="resolveList">
       <li class="resolveList__item">
@@ -59,8 +59,29 @@
     </ul>
     <img class="resolveList__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-05.jpg')) ?>" alt="悩む男性">
     </div>
-    <p class="resolveText">これらの他にも様々なお身体の症状や悩みをお持ちの方が増えています。</p>
-    <p class="resolveText">今までのその場しのぎの対症療法で</p>
+    <h3 class="resolveTitle">こういった悩みをお持ちの方もご安心ください!!</h3>
+    <p class="resolveText">当院の施術で似たような症状をお持ちの方がどんどんと良くなっていっています。</p>
+    <p class="resolveText">来院いただく皆様のほとんどはここに来られた時より元気になっていかれます。</p>
+  </div>
+</section>
+
+<!-- 特色 -->
+<section class="features">
+  <div class="inner">
+    <h2 class="featuresTitle">当院の特色</h2>
+    <p class="featuresText">他の院にはない当院最大の特徴</p>
+    <ul class="featuresList">
+      <li class="featuresList__item">
+        <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-06.jpg')) ?>" alt="">
+        <p class="featuresList__itemTag">筋肉と骨を分離させる「筋骨分離」</p>
+        <p class="featuresList__itemText">「筋肉と骨を分離させる」<br>整体師でもこの原理を知っている方は多くありません。この原理を実践し会得することであなたは病気とは無縁の健康な人に生まれ変わります！<br>詳しくは「お試し施術」でお話しします！</p>
+      </li>
+      <li class="featuresList__item">
+        <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')) ?>" alt="">
+        <p class="featuresList__itemTag">家でも外でもできる「楽になる体操」</p>
+        <p class="featuresList__itemText">当院で施術を受けるだけではなく、家でも外でも簡単にできる様々な体操をお伝えします。<br>「1分未満で」「寝転びながら」など誰でも簡単にでき、かつ効果抜群の体操です。<br>やればやるほどどんどん身体が楽になります！</p>
+      </li>
+    </ul>
   </div>
 </section>
 
