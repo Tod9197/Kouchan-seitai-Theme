@@ -183,3 +183,93 @@
   text-wrap: break-all;
   line-height: 1.8;
 }
+
+/* 治療の流れ */
+.flow {
+  padding: 10rem 0;
+}
+.flowTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.flowTitle::after {
+  position: absolute;
+  display: block;
+  content: "FLOW";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.flowList {
+  display: flex;
+  flex-direction: column;
+}
+.flowList__itemTitle {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.flowList__itemText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.flowList__itemImg {
+  width: 40rem;
+  height: auto;
+  aspect-ratio: 400/300;
+  object-fit: cover;
+}
+
+.price {
+  padding: 10rem 0;
+}
+.priceTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.priceTitle::after {
+  position: absolute;
+  display: block;
+  content: "Price";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.priceText__wrap {
+  padding: 5rem;
+  border: 5px double #ffd79a;
+}
+.priceText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 8rem;
+}
+.priceText span {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 2px 2px 2px #333;
+}

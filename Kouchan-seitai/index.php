@@ -12,7 +12,7 @@
 <section class="about">
   <div class="inner">
     <div class="aboutText__wrap">
-    <h2 class="aboutTitle">こーちゃん整体院とは</h2>
+    <h3 class="aboutTitle">こーちゃん整体院とは</h3>
     <p class="aboutText">痛くない、身体がどんどん楽に気持ち良くなる施術</p>
     <p class="aboutText__second">当院ではよくありがちな<span class="highlight">「ボキボキと骨をならす」</span>　<span class="highlight">「強く揉んでマッサージする」</span><br>といった整体院でよくありがちな施術を一切行いません。</p>
     <p class="aboutText__second">なぜなら、こういった施術は身体に無理を強いてしまい、実は身体の状態を悪化させてしまうこともあるのです。</p>
@@ -64,11 +64,12 @@
     <p class="resolveText">来院いただく皆様のほとんどはここに来られた時より元気になっていかれます。</p>
   </div>
 </section>
+<!-- 悩み解決ここまで -->
 
 <!-- 特色 -->
 <section class="features">
   <div class="inner">
-    <h2 class="featuresTitle">当院の特色</h2>
+    <h3 class="featuresTitle">当院の特色</h3>
     <p class="featuresText">他の院にはない当院最大の特徴</p>
     <ul class="featuresList">
       <li class="featuresList__item">
@@ -81,9 +82,41 @@
         <p class="featuresList__itemTag">家でも外でもできる「楽になる体操」</p>
         <p class="featuresList__itemText">当院で施術を受けるだけではなく、家でも外でも簡単にできる様々な体操をお伝えします。<br>「1分未満で」「寝転びながら」など誰でも簡単にでき、かつ効果抜群の体操です。<br>やればやるほどどんどん身体が楽になります！</p>
       </li>
+      <li class="featuresList__item">
+        <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')) ?>" alt="">
+        <p class="featuresList__itemTag">痛くない「気持ちのいい施術」</p>
+        <p class="featuresList__itemText">良くなるために痛い、我慢する必要ありません！当院の施術では身体に優しく負担のない施術のみであなたを健康に導きます！<br>今まで無理のある施術を受けて来られた方こそ当院にお越しください。</p>
+      </li>
     </ul>
   </div>
 </section>
+<!-- 特色ここまで -->
+
+<!-- 施術の流れ -->
+<section class="flow">
+  <div class="inner">
+    <h3 class="flowTitle">施術の流れ</h3>
+    <ul class="flowList">
+      <li class="flowList__item">
+        <h3 class="flowList__itemTitle">① 問診</h3>
+        <p class="flowList__itemText">最初にあなたのお身体の悩みをお聞かせください。</p>
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-08.jpg')); ?>" alt="問診画像">
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- 施術の流れここまで -->
+
+<!-- 治療料金 -->
+<section class="price">
+  <div class="inner">
+    <h3 class="priceTitle">治療料金</h3>
+    <div class="priceText__wrap">
+      <p class="priceText">診察料 : <span>6600円</span></p>
+    </div>
+  </div>
+</section>
+<!-- 施術の流れここまで -->
 
 
 
