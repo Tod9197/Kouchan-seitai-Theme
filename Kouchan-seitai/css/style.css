@@ -155,10 +155,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
 }
-.featuresList__item {
-  /* width: 20rem; */
-  /* height: 20rem; */
-}
+
 .featuresList__itemImg {
   width: 100%;
   height: auto;
@@ -174,7 +171,8 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 .featuresList__itemText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -231,6 +229,7 @@
   object-fit: cover;
 }
 
+/* 料金 */
 .price {
   padding: 10rem 0;
 }
@@ -261,15 +260,179 @@
 }
 .priceText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 2.4rem;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.2em;
-  margin-bottom: 8rem;
-}
-.priceText span {
   font-size: 4rem;
   font-weight: bold;
-  color: #ffd700;
-  text-shadow: 2px 2px 2px #333;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 4rem;
+}
+.priceText span {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #000000;
+}
+.priceText__arrow {
+  display: block;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.priceText__trialWrap {
+  width: 100%;
+  height: auto;
+  padding: 4rem 0;
+  margin-bottom: 8rem;
+  border: 5px double #ffd79a;
+}
+.priceText__trial {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 4rem;
+}
+.priceText__trial span {
+  font-size: 7rem;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #ff0000 30%,
+    #ff4500 40%,
+    #ff8c00 60%,
+    #ffd700 80%,
+    #fffacd
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.priceText__trial.-second {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.priceReserve__numberText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+.priceReserve__numberText.-second {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 2;
+}
+.priceReserve__lineText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+
+.priceReserve__numberWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.priceReserve__number:hover {
+  opacity: 0.8;
+}
+.priceReserve__number {
+  display: inline-flex;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+  margin: auto;
+}
+.whiteIcon.-price {
+  font-size: 3rem;
+  color: #fff;
+  background-color: #ff914d;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+.priceReserve__lineLink {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* お客様の声 */
+.voices {
+  padding: 10rem 0;
+}
+.voicesTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.voicesTitle::after {
+  position: absolute;
+  display: block;
+  content: "VOICEs";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.voicesText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 8rem;
+}
+.voicesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 0;
+}
+.voicesList__item {
+  width: 100%;
+  height: 30rem;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.voicesList__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.voicesList__item:hover img {
+  transform: scale(1.1);
+}
+.voicesList__itemText {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #eee;
+  padding: 1.2rem;
+  letter-spacing: 0.1em;
 }

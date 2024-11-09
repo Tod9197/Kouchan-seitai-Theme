@@ -74,18 +74,18 @@
     <ul class="featuresList">
       <li class="featuresList__item">
         <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-06.jpg')) ?>" alt="">
-        <p class="featuresList__itemTag">筋肉と骨を分離させる「筋骨分離」</p>
-        <p class="featuresList__itemText">「筋肉と骨を分離させる」<br>整体師でもこの原理を知っている方は多くありません。この原理を実践し会得することであなたは病気とは無縁の健康な人に生まれ変わります！<br>詳しくは「お試し施術」でお話しします！</p>
+        <p class="featuresList__itemTag">「身体の現在地」<br>をお伝えします。</p>
+        <p class="featuresList__itemText">全身チェックすることで現在、あなたのお身体がどうなっているのか詳しくお伝えします。痛みや不調の根本原因を探し出します。</p>
       </li>
       <li class="featuresList__item">
         <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')) ?>" alt="">
-        <p class="featuresList__itemTag">家でも外でもできる「楽になる体操」</p>
-        <p class="featuresList__itemText">当院で施術を受けるだけではなく、家でも外でも簡単にできる様々な体操をお伝えします。<br>「1分未満で」「寝転びながら」など誰でも簡単にでき、かつ効果抜群の体操です。<br>やればやるほどどんどん身体が楽になります！</p>
+        <p class="featuresList__itemTag">「触れる」「なでる」「さする」<br>といった優しい施術</p>
+        <p class="featuresList__itemText">高齢者、妊婦さん、小さいお子様でも安心して受けていただけます。非常にソフトで気持ちの良い施術で寝てしまう方もおられます。</p>
       </li>
       <li class="featuresList__item">
         <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')) ?>" alt="">
-        <p class="featuresList__itemTag">痛くない「気持ちのいい施術」</p>
-        <p class="featuresList__itemText">良くなるために痛い、我慢する必要ありません！当院の施術では身体に優しく負担のない施術のみであなたを健康に導きます！<br>今まで無理のある施術を受けて来られた方こそ当院にお越しください。</p>
+        <p class="featuresList__itemTag">徹底した<br>「アフターサポート」</p>
+        <p class="featuresList__itemText">お客様一人一人に合わせたセルフケア方法をお伝えし、日常生活で気をつけることや身体の動かし方なども詳しく指導させていただきます。</p>
       </li>
     </ul>
   </div>
@@ -112,12 +112,82 @@
   <div class="inner">
     <h3 class="priceTitle">治療料金</h3>
     <div class="priceText__wrap">
-      <p class="priceText">診察料 : <span>6600円</span></p>
+      <p class="priceText">診察料 : <span>8,800円</span></p>
+      <span class="priceText__arrow">⬇︎</span>
+      <div class="priceText__trialWrap">
+      <p class="priceText__trial">初回お試し価格 : <span>
+      <?php 
+      $page_id = get_option('page_on_front'); 
+      $initial_fee = get_post_meta($page_id,'初回料金',true);
+      if(!empty($initial_fee)){
+        echo $initial_fee;
+      } else {
+        echo ' - ';
+      }
+      ?>  
+      円</span> </p>
+        <p class="priceText__trial -second">施術時間目安：約60分</p>
+      </div>
+      <p class="priceReserve__numberText">診察予約はお電話で</p>
+      <!-- 電話問い合わせ -->
+      <div class="priceReserve__numberWrap">
+          <a class="priceReserve__number" href="tel:07085407701">
+          <i class="fas fa-phone whiteIcon -price"></i>  
+          070-8540-7701
+          </a>
+      </div>
+      <p class="priceReserve__numberText -second">施術中は電話に出られない可能性があります。<br>必ず折り返ししますので、メッセージにて<span class="highlight">「お名前」</span>と<span class="highlight">「お電話番号」</span>を残してください。</p>
+      <!-- LINEorお問い合わせフォーム -->
+      <div class="priceReserve__lineWrap">
+        <p class="priceReserve__lineText"><span class="highlight">「公式LINE」</span>または<span class="highlight">「問い合わせフォーム」</span>からもご予約が可能です。</p>
+        <a class="priceReserve__lineLink">公式LINEで予約・相談</a>
+        <p class="priceReserve__lineText">☆ご予約だけでなく、相談や質問にもお答えしていますので、お気軽にご連絡ください☆</p>
+      </div>
     </div>
   </div>
 </section>
 <!-- 施術の流れここまで -->
 
+<!-- お客様の声 -->
+<section class="voices">
+  <div class="inner">
+    <h3 class="voicesTitle">お客様の声</h3>
+    <p class="voicesText">施術を受け健康状態が良くなったお客様の声を集めました。</p>
+    <ul class="voicesList">
+      <li class="voicesList__item">
+        <a class="voicesList__itemLink" href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-02.jpg')); ?>" alt="">
+          <p class="voicesList__itemText">山口様 男性</p>
+        </a>
+      </li>
+      <li class="voicesList__item">
+        <a href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-09.jpg')); ?>" alt="">
+        </a>
+      </li>
+      <li class="voicesList__item">
+        <a href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-10.jpg')); ?>" alt="">
+        </a>
+      </li>
+      <li class="voicesList__item">
+        <a href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')); ?>" alt="">
+        </a>
+      </li>
+      <li class="voicesList__item">
+        <a href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-08.jpg')); ?>" alt="">
+        </a>
+      </li>
+      <li class="voicesList__item">
+        <a href="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-11.jpg')); ?>" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
 
 
   <!-- フッター -->
