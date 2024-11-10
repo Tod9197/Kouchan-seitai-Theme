@@ -30,6 +30,22 @@
   </div>
 </section>
 
+  <!-- 院長紹介 -->
+    <div class="director">
+      <div class="inner">
+        <h3 class="directorTitle">院長紹介</h3>
+        <p class="directorName">西垣(こーちゃん)</p>
+        <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-12.jpg')); ?>" alt="院長画像">
+        <div class="directorText__wrap">
+          <p class="directorText">年齢 : </p>
+          <p class="directorText">出身 : </p>
+          <p class="directorText">保有資格 : </p>
+          <p class="directorText">院長からのメッセージ : </p>
+        </div>
+      </div>
+    </div>
+
+
 <!-- 悩み解決 -->
 <section class="resolve">
   <div class="inner">
@@ -189,6 +205,19 @@
   </div>
 </section>
 
+<!-- アクセス -->
+<section class="access">
+  <div class="inner">
+    <h3 class="accessTitle">アクセス</h3>
+    <p class="accessText">当院の住所です。大阪京橋の各線からすぐの便利な立地にあります。</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.1642590813794!2d135.5306985886857!3d34.69689304323026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d7677aa7d9%3A0x9352a9b582580554!2z5Lqs5qmL6aeF!5e0!3m2!1sja!2sjp!4v1731222327388!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <ul class="accessList">
+        <li class="accessList__item"><span>京阪京橋駅</span>から徒歩で約5分</li>
+        <li class="accessList__item"><span>JR京橋駅</span>から徒歩で約5分</li>
+      </ul>
+      <a class="accessList__link" href="">駅からの具体的なアクセスはこちら</a>
+  </div>
+</section>
 
   <!-- フッター -->
 <footer>

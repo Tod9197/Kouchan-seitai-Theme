@@ -69,6 +69,63 @@
   object-fit: cover;
 }
 
+/* 院長紹介 */
+.director {
+  padding: 10rem 0;
+}
+.directorTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.directorTitle::after {
+  position: absolute;
+  display: block;
+  content: "DIRECTOR";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.directorName {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.directorImg {
+  display: block;
+  width: 30rem;
+  height: 30rem;
+  aspect-ratio: 300/300;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: auto;
+}
+.directorText__wrap {
+  padding: 15rem 5rem 5rem 5rem;
+  border: 5px double #ffd79a;
+  margin-top: -12rem;
+}
+.directorText {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4rem;
+}
+
 /* <!-- 悩み解決 --> */
 .resolve {
   padding: 10rem;
@@ -435,4 +492,67 @@
   background-color: #eee;
   padding: 1.2rem;
   letter-spacing: 0.1em;
+}
+
+/* アクセス */
+.access {
+  padding: 10rem 0;
+}
+.accessTitle {
+  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-size: 2.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+.accessTitle::after {
+  position: absolute;
+  display: block;
+  content: "ACCESS";
+  font-size: 9rem;
+  font-weight: 500;
+  color: #eee;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+.accessText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 8rem;
+}
+.accessList {
+  display: flex;
+  margin: 5rem 0 10rem;
+}
+.accessList__item {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  list-style: disc;
+  letter-spacing: 0.1em;
+  margin-right: 4rem;
+  margin-left: 2rem;
+}
+.accessList__item span {
+  font-weight: bold;
+}
+.accessList__link {
+  display: block;
+  width: 40%;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: #ff914d;
+  text-align: center;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.accessList__link:hover {
+  opacity: 0.7;
 }
