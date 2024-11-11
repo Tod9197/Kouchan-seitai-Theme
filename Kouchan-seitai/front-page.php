@@ -169,7 +169,37 @@
   <div class="inner">
     <h3 class="voicesTitle">お客様の声</h3>
     <p class="voicesText">施術を受け健康状態が良くなったお客様の声を集めました。</p>
-    <ul class="voicesList">
+<ul class="voicesList">
+
+<?php  
+$args = array(
+  'post_type' => 'voices',
+  'posts_per_page' => 6,
+);
+$the_query = new WP_Query($args);
+
+if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post();
+?>
+<li class="voicesList__item">
+  <a class="voicesList__itemLink" href="<?php the_permalink(); ?>">
+    <?php if(has_post_thumbnail()) : ?>
+          <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+          <?php else : ?>
+            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+          <?php endif; ?>
+          <p class="voicesList__itemText"><?php the_title(); ?></p>
+        </a>
+      </li>
+      <?php endwhile;
+      wp_reset_postdata(); 
+      else : 
+        echo '<p>お客様の声はまだありません。</p>';
+      endif;
+      ?>
+</ul>
+    </div>
+
+    <!-- <ul class="voicesList">
       <li class="voicesList__item">
         <a class="voicesList__itemLink" href="">
           <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-02.jpg')); ?>" alt="">
@@ -200,7 +230,7 @@
         <a href="">
           <img src="<?php echo esc_url(get_theme_file_uri('/img/seitai-11.jpg')); ?>" alt="">
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </section>
