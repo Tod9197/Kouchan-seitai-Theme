@@ -36,7 +36,7 @@ function custom_post_type_voices(){
     'menu_position' => 5,
     'supports' =>array('title','editor','thumbnail'),
   );
-
+ 
   register_post_type('voices',$args);
 
   // カテゴリーとタグを追加

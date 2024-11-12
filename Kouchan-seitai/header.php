@@ -18,10 +18,10 @@
 <header class="header">
     <div class="headerInner">
     <div class="headerLogo__wrap">
-      <a class="headerLogo" href="<?php esc_url(home_url('/')) ?>">
+      <a class="headerLogo" href="<?php echo esc_url(home_url('/')) ?>">
         こーちゃん整体院
       </a>  
-      <a href="<?php esc_url(home_url('/')) ?>">
+      <a href="<?php echo esc_url(home_url('/')) ?>">
       <img class="headerLogo__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-logo.png')) ?>" alt="こーちゃん整体院ロゴ">
       </a>
     </div>
