@@ -231,8 +231,18 @@ $the_query = new WP_Query($args);
 </section>
 
   <!-- フッター -->
-<footer>
-
+<footer class="footer">
+  <div class="footerInner">
+    <div class="footerLogo__wrap">
+      <a class="footerLogo" href="<?php echo esc_url(home_url('/')) ?>">
+        こーちゃん整体院
+      </a>  
+      <a href="<?php echo esc_url(home_url('/')) ?>">
+      <img class="footerLogo__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-logo.png')) ?>" alt="こーちゃん整体院ロゴ">
+      </a>
+    </div>
+     
+  </div>
 </footer>
 <?php wp_footer(); ?>
 </body>
