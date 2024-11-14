@@ -241,7 +241,11 @@ $the_query = new WP_Query($args);
       <img class="footerLogo__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-logo.png')) ?>" alt="こーちゃん整体院ロゴ">
       </a>
     </div>
-     
+    <address class="footerAdress">
+      〒000-0000
+      <br>
+      大阪府京橋１丁目1-1-1
+    </address>
   </div>
 </footer>
 <?php wp_footer(); ?>

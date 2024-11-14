@@ -551,8 +551,9 @@
   text-align: center;
   margin: auto;
   padding: 2rem;
-  border-radius: 10px;
 }
 .accessList__link:hover {
-  opacity: 0.7;
+  color: #ff914d;
+  background-color: #fff;
+  border: 1px solid #ff914d;
 }
