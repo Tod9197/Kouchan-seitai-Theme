@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/footer.css')); ?>" type="text/css">
   <script src="<?php echo esc_url(get_theme_file_uri('/js/main.js')); ?>"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <?php wp_head(); ?>
 </head>
 <body>

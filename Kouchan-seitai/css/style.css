@@ -14,37 +14,70 @@
 .about {
   padding: 10rem 0;
 }
-.aboutText__wrap {
+.aboutTitle__flex {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 6rem;
+  position: relative;
+}
+.aboutTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 50%;
+}
+.aboutTitle__flex::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.aboutTitle__flex::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
 }
 .aboutTitle {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
-  font-size: 2.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
   margin-bottom: 10rem;
   position: relative;
   z-index: -1;
 }
-.aboutTitle::after {
-  position: absolute;
-  display: block;
-  content: "ABOUT";
-  font-size: 9rem;
-  font-weight: 500;
-  color: #eee;
-  top: -7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
+.aboutTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
 }
+.aboutTitle__img {
+  width: 50%;
+  height: auto;
+  margin-top: 15rem;
+  position: relative;
+  box-shadow: 6px 6px #ffd79a;
+  outline: 3px solid #fff;
+  border: 1px solid #eee;
+}
+
 .aboutText {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 2.4rem;
   letter-spacing: 0.1em;
   margin-bottom: 8rem;
 }
 .aboutText__second {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.6rem;
   line-height: 2;
   word-break: break-all;
@@ -73,29 +106,51 @@
 .director {
   padding: 10rem 0;
 }
+.directorTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.directorTitle__wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.directorTitle__wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+
+.directorTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
 .directorTitle {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
-  font-size: 2.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   position: relative;
   z-index: -1;
 }
-.directorTitle::after {
-  position: absolute;
-  display: block;
-  content: "DIRECTOR";
-  font-size: 9rem;
-  font-weight: 500;
-  color: #eee;
-  top: -7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
-}
+
 .directorName {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-family: "Noto Serif JP", serif;
   font-size: 3.6rem;
   font-weight: bold;
   text-align: center;
@@ -119,36 +174,82 @@
   margin-top: -12rem;
 }
 .directorText {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
+  font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 4rem;
+  letter-spacing: 0.1em;
+}
+.directorText.-certification {
+  display: flex;
+  flex-direction: column;
+}
+.directorText.-certification span {
+  font-weight: bold;
+  margin-top: 2rem;
+  letter-spacing: 0.1em;
 }
 
 /* <!-- 悩み解決 --> */
-.resolve {
+.counseling {
   padding: 10rem;
 }
-.resolveTitle {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
+.counselingTitle {
+  font-family: "Noto Serif JP", serif;
   font-size: 2.4rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: -1;
 }
-.resolveFlex {
+
+.counselingTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.counselingTitle__wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.counselingTitle__wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+
+.counselingTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.counselingFlex {
   display: flex;
   margin-bottom: 10rem;
 }
 /* レ点チェック */
-.resolveList {
+.counselingList {
   display: flex;
   flex-direction: column;
   width: 59%;
   margin-right: 2rem;
 }
-.resolveList__item {
+.counselingList__item {
   display: flex;
   align-items: center;
   margin-bottom: 4rem;
@@ -159,18 +260,18 @@
   background-color: transparent;
   margin-right: 1rem;
 }
-.resolveList__itemText {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 1.8rem;
+.counselingList__itemText {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2rem;
   letter-spacing: 0.1em;
   line-height: 1.8;
 }
-.resolveList__img {
+.counselingList__img {
   width: 45%;
   height: auto;
 }
-.resolveText {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+.counselingText {
+  font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   line-height: 1.8;
   margin-bottom: 2rem;
@@ -181,28 +282,48 @@
   padding: 10rem 0;
 }
 .featuresTitle {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
-  font-size: 2.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   position: relative;
   z-index: -1;
 }
-.featuresTitle::after {
-  position: absolute;
-  display: block;
-  content: "FEATURES";
-  font-size: 9rem;
-  font-weight: 500;
-  color: #eee;
-  top: -7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
+.featuresTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
 }
+.featuresTitle__wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.featuresTitle__wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.featuresTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
 .featuresText {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 2.4rem;
   letter-spacing: 0.1em;
   margin-bottom: 8rem;
@@ -224,7 +345,7 @@
   margin-bottom: 4rem;
 }
 .featuresList__itemTag {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -232,7 +353,7 @@
   line-height: 1.6;
 }
 .featuresList__itemText {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 1.6rem;
   text-align: left;
   text-wrap: break-all;
@@ -244,26 +365,46 @@
   padding: 10rem 0;
 }
 .flowTitle {
-  font-family: "Noto Sans JP", "Noto Sans Japanese";
-  font-size: 2.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   position: relative;
   z-index: -1;
 }
-.flowTitle::after {
-  position: absolute;
-  display: block;
-  content: "FLOW";
-  font-size: 9rem;
-  font-weight: 500;
-  color: #eee;
-  top: -7rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -2;
+.flowTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
 }
+.flowTitle__wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.flowTitle__wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.flowTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
 .flowList {
   display: flex;
   flex-direction: column;
@@ -405,10 +546,6 @@
   align-items: center;
   margin-bottom: 4rem;
 }
-
-.priceReserve__number:hover {
-  opacity: 0.8;
-}
 .priceReserve__number {
   display: inline-flex;
   align-items: center;
@@ -416,6 +553,9 @@
   font-weight: bold;
   color: #333;
   margin: auto;
+}
+.priceReserve__number:hover {
+  color: #ff8c00;
 }
 .whiteIcon.-price {
   font-size: 3rem;
@@ -551,6 +691,7 @@
   text-align: center;
   margin: auto;
   padding: 2rem;
+  border: 1px solid #ff8c00;
 }
 .accessList__link:hover {
   color: #ff914d;

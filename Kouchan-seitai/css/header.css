@@ -46,13 +46,13 @@
   display: flex;
   align-items: center;
 }
-.headerList__item.-phone:hover {
-  opacity: 0.8;
-}
 .headerList__itemPhone {
   font-size: 3rem;
   font-weight: bold;
   color: #333;
+}
+.headerList__itemPhone:hover {
+  color: #ff914d;
 }
 .whiteIcon {
   font-size: 2rem;
