@@ -8,6 +8,7 @@
 </div>
 
 
+
 <!-- 当院について -->
 <section class="about">
   <div class="inner">
@@ -33,26 +34,6 @@
     </ul>
     </div>  
 </section>
-
-  <!-- 院長紹介 -->
-    <div class="director">
-      <div class="inner">
-        <div class="directorTitle__wrap">
-        <p class="directorTitle__sub">DIRECTOR</p>
-        <h2 class="directorTitle">院長紹介</h2>
-        </div>
-        
-        <p class="directorName">西垣宏亮(こーちゃん)</p>
-        <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-12.jpg')); ?>" alt="院長画像">
-        <div class="directorText__wrap">
-          <p class="directorText">年齢 : </p>
-          <p class="directorText">出身 : </p>
-          <p class="directorText -certification">保有資格 : <span>VALXスクール認定トレーナー</span><span>日本立腰協会認定トレーナー</span><span>二宮整体アカデミー修士</span></p>
-          <p class="directorText">院長からのメッセージ : </p>
-        </div>
-      </div>
-    </div>
-
 
 <!-- 悩み解決 -->
 <section class="counseling">
@@ -91,6 +72,19 @@
     <p class="counselingText">当院の施術で似たような症状をお持ちの方がどんどんと良くなっていっています。</p>
     <p class="counselingText">来院いただく皆様のほとんどはここに来られた時より元気になっていかれます。</p>
   </div>
+
+  <a class="counselingTrial__link" href="#trial">
+  <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
+      $page_id = get_option('page_on_front'); 
+      $initial_fee = get_post_meta($page_id,'初回料金',true);
+      if(!empty($initial_fee)){
+        echo $initial_fee;
+      } else {
+        echo ' - ';
+      }
+      ?> </span>円実施中！！</p>
+  <p class="counselingTrial__text">お試し施術を受けてみる</p>
+  </a>
 </section>
 <!-- 悩み解決ここまで -->
 
@@ -122,39 +116,8 @@
       </li>
     </ul>
   </div>
-</section>
-<!-- 特色ここまで -->
-
-<!-- 施術の流れ -->
-<section class="flow">
-  <div class="inner">
-     <div class="flowTitle__wrap">
-      <p class="flowTitle__sub">FLOW</p>
-      <h2 class="flowTitle">施術の流れ</h2>
-    </div>
-
-    
-    <ul class="flowList">
-      <li class="flowList__item">
-        <h3 class="flowList__itemTitle">① 問診</h3>
-        <p class="flowList__itemText">最初にあなたのお身体の悩みをお聞かせください。</p>
-        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-08.jpg')); ?>" alt="問診画像">
-      </li>
-    </ul>
-  </div>
-</section>
-<!-- 施術の流れここまで -->
-
-<!-- 治療料金 -->
-<section class="price">
-  <div class="inner">
-    <h3 class="priceTitle">治療料金</h3>
-    <div class="priceText__wrap">
-      <p class="priceText">診察料 : <span>8,800円</span></p>
-      <span class="priceText__arrow">⬇︎</span>
-      <div class="priceText__trialWrap">
-      <p class="priceText__trial">初回お試し価格 : <span>
-      <?php 
+   <a class="counselingTrial__link" href="#trial">
+  <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
       $page_id = get_option('page_on_front'); 
       $initial_fee = get_post_meta($page_id,'初回料金',true);
       if(!empty($initial_fee)){
@@ -162,35 +125,54 @@
       } else {
         echo ' - ';
       }
-      ?>  
-      円</span> </p>
-        <p class="priceText__trial -second">施術時間目安：約60分</p>
-      </div>
-      <p class="priceReserve__numberText">診察予約はお電話で</p>
-      <!-- 電話問い合わせ -->
-      <div class="priceReserve__numberWrap">
-          <a class="priceReserve__number" href="tel:07085407701">
-          <i class="fas fa-phone whiteIcon -price"></i>  
-          070-8540-7701
-          </a>
-      </div>
-      <p class="priceReserve__numberText -second">施術中は電話に出られない可能性があります。<br>必ず折り返ししますので、メッセージにて<span class="highlight">「お名前」</span>と<span class="highlight">「お電話番号」</span>を残してください。</p>
-      <!-- LINEorお問い合わせフォーム -->
-      <div class="priceReserve__lineWrap">
-        <p class="priceReserve__lineText"><span class="highlight">「公式LINE」</span>または<span class="highlight">「問い合わせフォーム」</span>からもご予約が可能です。</p>
-        <a class="priceReserve__lineLink">公式LINEで予約・相談</a>
-        <p class="priceReserve__lineText">☆ご予約だけでなく、相談や質問にもお答えしていますので、お気軽にご連絡ください☆</p>
-      </div>
+      ?> </span>円実施中！！</p>
+  <p class="counselingTrial__text">お試し施術を受けてみる</p>
+  </a>
+</section>
+<!-- 特色ここまで -->
+
+<!-- 施術の流れ -->
+<section class="flow">
+  <div class="inner">
+    <div class="flowTitle__wrap">
+      <p class="flowTitle__sub">FLOW</p>
+      <h2 class="flowTitle">施術の流れ</h2>
     </div>
+
+    
+    <ul class="flowList">
+      <li class="flowList__item">
+        <h3 class="flowList__itemTitle">①問診</h3>
+        <p class="flowList__itemText">最初にあなたのお身体の悩みをお聞かせください。</p>
+        <p class="flowList__itemText">全身チェックにより、あなたの今の身体の状況(身体の現在地)がどういったものかを詳しくお伝えします。</p>
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-08.jpg')); ?>" alt="問診画像">
+      </li>
+      <li class="flowList__item">
+        <h3 class="flowList__itemTitle">②施術</h3>
+        <p class="flowList__itemText">一人一人に合ったオーダーメイド施術。</p>
+        <p class="flowList__itemText">問診の結果を元にその人にベストの施術を行います。「バキバキしない」「痛くない」ので安心して施術を受けてください。</p>
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-02.jpg')); ?>" alt="問診画像">
+      </li>
+      <li class="flowList__item">
+        <h3 class="flowList__itemTitle">③セルフケア</h3>
+        <p class="flowList__itemText">家でもどこでも簡単にできるセルフケアをお伝えします。</p>
+        <p class="flowList__itemText">施術で良くなった状態を維持し、さらに向上させるために、ご自身でも簡単にできるセルフケアをお伝えします。</p>
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')); ?>" alt="問診画像">
+      </li>
+    </ul>
   </div>
 </section>
 <!-- 施術の流れここまで -->
 
+
 <!-- お客様の声 -->
 <section class="voices">
   <div class="inner">
-    <h3 class="voicesTitle">お客様の声</h3>
-    <p class="voicesText">施術を受け健康状態が良くなったお客様の声を集めました。</p>
+<div class="voicesTitle__wrap">
+      <p class="voicesTitle__sub">VOICES</p>
+      <h2 class="voicesTitle">お客様の声</h2>
+  </div>
+    <p class="voicesText">施術を受け健康状態が良くなったお客様の感想です。</p>
 <?php  
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -238,38 +220,88 @@ $the_query = new WP_Query($args);
 </div>
 </section>
 
-<!-- アクセス -->
-<section class="access">
+ <!-- 代表挨拶 -->
+    <div class="director">
+      <div class="inner">
+        <div class="directorTitle__wrap">
+        <p class="directorTitle__sub">DIRECTOR</p>
+        <h2 class="directorTitle">代表挨拶</h2>
+        </div>
+        
+        <p class="directorName">西垣宏亮(こーちゃん)</p>
+        <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="院長画像">
+        <div class="directorText__wrap">
+          <p class="directorText">年齢 : </p>
+          <p class="directorText">出身 : </p>
+          <p class="directorText -certification">保有資格 : <span>VALXスクール認定トレーナー</span><span>日本立腰協会認定トレーナー</span><span>二宮整体アカデミー修士</span></p>
+          <p class="directorText">院長からのメッセージ : </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 治療料金 -->
+<section class="price">
   <div class="inner">
-    <h3 class="accessTitle">アクセス</h3>
-    <p class="accessText">当院の住所です。大阪京橋の各線からすぐの便利な立地にあります。</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.1642590813794!2d135.5306985886857!3d34.69689304323026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d7677aa7d9%3A0x9352a9b582580554!2z5Lqs5qmL6aeF!5e0!3m2!1sja!2sjp!4v1731222327388!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <ul class="accessList">
-        <li class="accessList__item"><span>京阪京橋駅</span>から徒歩で約5分</li>
-        <li class="accessList__item"><span>JR京橋駅</span>から徒歩で約5分</li>
-      </ul>
-      <a class="accessList__link" href="">駅からの具体的なアクセスはこちら</a>
+
+  <div class="priceTitle__wrap" id="trial">
+      <p class="priceTitle__sub">PRICE</p>
+      <h2 class="priceTitle">治療料金</h2>
+    </div>
+
+    <div class="priceText__wrap">
+      <p class="priceText">診察料 : <span>8,800円</span></p>
+      <span class="priceText__arrow">⬇︎</span>
+      <div class="priceText__trialWrap">
+      <p class="priceText__trial">初回お試し価格 : <span>
+      <?php 
+      $page_id = get_option('page_on_front'); 
+      $initial_fee = get_post_meta($page_id,'初回料金',true);
+      if(!empty($initial_fee)){
+        echo $initial_fee;
+      } else {
+        echo ' - ';
+      }
+      ?>  
+      円</span> </p>
+        <p class="priceText__trial -second">施術時間目安：約60分</p>
+      </div>
+        <!-- 電話問い合わせ -->
+      <p class="priceReserve__numberText">診察予約はお電話で</p>
+      <div class="priceReserve__numberWrap">
+          <a class="priceReserve__number" href="tel:07085407701">
+          <i class="fas fa-phone whiteIcon -price"></i>  
+          070-8540-7701
+          </a>
+      </div>
+      <p class="priceReserve__numberText -second">施術中は電話に出られない可能性があります。<br>必ず折り返ししますので、メッセージにて<span class="highlight">「お名前」</span>と<span class="highlight">「お電話番号」</span>を残してください。</p>
+      <!-- LINEorお問い合わせフォーム -->
+      <div class="priceReserve__lineWrap">
+        <a class="priceReserve__lineLink">公式LINEで予約・相談</a>
+        <p class="priceReserve__lineText"><span class="highlight">「公式LINE」</span>または<span class="highlight">「問い合わせフォーム」</span>からもご予約が可能です。</p>
+        <p class="priceReserve__lineText">☆ご予約だけでなく、相談や質問にもお答えしていますので、お気軽にご連絡ください☆</p>
+      </div>
+    </div>
   </div>
 </section>
 
-  <!-- フッター -->
-<footer class="footer">
-  <div class="footerInner">
-    <div class="footerLogo__wrap">
-      <a class="footerLogo" href="<?php echo esc_url(home_url('/')) ?>">
-        こーちゃん整体院
-      </a>  
-      <a href="<?php echo esc_url(home_url('/')) ?>">
-      <img class="footerLogo__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-logo.png')) ?>" alt="こーちゃん整体院ロゴ">
-      </a>
-    </div>
-    <address class="footerAdress">
-      〒000-0000
-      <br>
-      大阪府京橋1丁目1-1-1
-    </address>
+
+<!-- アクセス -->
+<section class="access">
+  <div class="inner">
+  <div class="accessTitle__wrap">
+      <p class="accessTitle__sub">ACCESS</p>
+      <h2 class="accessTitle">アクセス</h2>
   </div>
-</footer>
-<?php wp_footer(); ?>
-</body>
-</html>
+    <p class="accessText">当院の住所です。大阪京橋の各線からすぐの便利な立地にあります。</p>
+    <p class="accessText -address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタラヤベンダービル</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3134778998983!2d135.52912637574414!3d34.697272472921036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d637602daf%3A0xf32f0b08d38ddc4b!2z44CSNTM0LTAwMjQg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65p2x6YeO55Sw55S677yS5LiB55uu77yT4oiS77yR77ySIOODr-OCv-ODpOODqeODmeODs-ODgOODvOODk-ODqw!5e0!3m2!1sja!2sjp!4v1731721786323!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <ul class="accessList">
+        <li class="accessList__item"><span>京阪京橋駅</span>から徒歩で約3分</li>
+        <li class="accessList__item"><span>JR京橋駅</span>から徒歩で約3分</li>
+      </ul>
+      <a class="accessList__link" href="<?php echo esc_url('/access-detail'); ?>">駅からの具体的なアクセスはこちら</a>
+  </div>
+</section>
+
+<?php get_footer(); ?>

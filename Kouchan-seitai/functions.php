@@ -5,6 +5,42 @@ function mytheme_setup(){
   add_theme_support('post-thumbnails');//サムネイル(アイキャッチ画像)を有効にする
 }
 
+// お知らせ
+function custom_post_type_news(){
+  $labels = array(
+    'name' => 'お知らせ',
+    'singular_name' => 'お知らせ',
+    'menu_name' => 'お知らせ',
+    'name_admin_bar' => 'お知らせ',
+    'add_new' => '新規追加',
+    'add_new_item' => '新しいお知らせを追加',
+    'edit_item' => 'お知らせの編集',
+    'new_item' => '新しいお知らせ',
+    'view_item' => 'お知らせを見る',
+    'all_items' => '全てのお知らせ',
+    'search_items' => 'お知らせを検索',
+    'not_found' => 'お知らせが見つかりませんでした',
+    'not_found_in_trash' => 'ゴミ箱にお知らせはありません'
+  );
+
+   $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'news'),
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => false,
+    'menu_position' => 6,
+    'supports' => array('title','editor','thumbnail'),
+   );
+
+   register_post_type('news',$args);
+}
+add_action('init','custom_post_type_news');
+
 // お客様の声の投稿
 function custom_post_type_voices(){
   $labels = array(
@@ -36,7 +72,6 @@ function custom_post_type_voices(){
     'menu_position' => 5,
     'supports' =>array('title','editor','thumbnail'),
   );
- 
   register_post_type('voices',$args);
 
   // カテゴリーとタグを追加
