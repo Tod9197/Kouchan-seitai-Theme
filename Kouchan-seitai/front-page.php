@@ -116,7 +116,29 @@
       </li>
     </ul>
   </div>
-   <a class="counselingTrial__link" href="#trial">
+</section>
+<!-- 特色ここまで -->
+
+<!-- 選ばれる理由 -->
+<section class="reason">
+  <div class="inner">
+
+  <div class="reasonTitle__wrap">
+      <p class="reasonTitle__sub">REASON</p>
+      <h2 class="reasonTitle">当院が選ばれる理由</h2>
+  </div>
+  <p class="reasonText">他の整体院との7つ違い</p>
+  <ul class="reasonList">
+    <li class="reasonList__item">①カウンセリング・検査・説明に重きを置き、痛みや不調の根本原因を探します。</li>
+    <li class="reasonList__item">②完全予約制なので待ち時間なく施術を受けることができます。</li>
+    <li class="reasonList__item">③あなたに合った日常生活の注意点・
+セルフケアの方法をお伝えします。</li>
+    <li class="reasonList__item">④誰よりもあなたと向き合い、二人三脚で悩みを解決していきます。</li>
+    <li class="reasonList__item">⑤2万人の臨床経験があり身体に対する知識と経験が豊富です。</li>
+    <li class="reasonList__item">⑥その場しのぎの施術は絶対にしません。</li>
+    <li class="reasonList__item">⑦「改善」という結果を提供いたします。</li>
+  </ul>
+  <a class="counselingTrial__link" href="#trial">
   <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
       $page_id = get_option('page_on_front'); 
       $initial_fee = get_post_meta($page_id,'初回料金',true);
@@ -128,8 +150,9 @@
       ?> </span>円実施中！！</p>
   <p class="counselingTrial__text">お試し施術を受けてみる</p>
   </a>
+  </div>
 </section>
-<!-- 特色ここまで -->
+<!-- 選ばれる理由ここまで -->
 
 <!-- 施術の流れ -->
 <section class="flow">

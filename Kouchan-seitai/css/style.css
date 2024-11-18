@@ -440,6 +440,79 @@
   line-height: 1.8;
 }
 
+/* 選ばれる理由 */
+.reason {
+  padding: 10rem 0;
+}
+.reasonTitle {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: -1;
+}
+.reasonTitle__wrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.reasonTitle__wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.reasonTitle__wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.reasonTitle__sub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.reasonText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: 0.1em;
+  margin-bottom: 6rem;
+}
+.reasonList {
+  display: flex;
+  flex-direction: column;
+}
+.reasonList__item {
+  width: 100%;
+  max-width: 1000px;
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  color: #000;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #ffeecc, #fff6e0);
+  border: 1px solid #ff8c00;
+  border-radius: 4px;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+  position: relative;
+  padding-left: 3rem; /* 左側に余白を追加 */
+  text-indent: -2rem;
+}
+
 /* 治療の流れ */
 .flow {
   padding: 10rem 0;
