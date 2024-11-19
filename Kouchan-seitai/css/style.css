@@ -354,6 +354,10 @@
   margin-top: 3rem;
   letter-spacing: 0.15em;
 }
+.directorText.-message {
+  line-height: 2;
+  letter-spacing: 0.15em;
+}
 
 /* 特色 */
 .features {

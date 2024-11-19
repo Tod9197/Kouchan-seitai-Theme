@@ -42,30 +42,8 @@
       <p class="counselingTitle__sub">COUNSELING</p>
       <h2 class="counselingTitle">お悩み相談</h2>
     </div>
-    <!-- <p class="counselingTitle">こんなお身体の悩みをお持ちではないですか？</p> -->
     <div class="counselingFlex">
-    <ul class="counselingList">
-      <li class="counselingList__item">
-        <i class="fas fa-check-square check-red"></i>
-        <p class="counselingList__itemText">腰痛がひどく立っていても座っていても辛い。</p>
-      </li>
-      <li class="counselingList__item">
-        <i class="fas fa-check-square check-red"></i>
-        <p class="counselingList__itemText">常に肩が凝っていて呼吸も苦しい。</p>
-      </li>
-      <li class="counselingList__item">
-        <i class="fas fa-check-square check-red"></i>
-        <p class="counselingList__itemText">よく頭が痛くなり仕事を休みがち。</p>
-      </li>
-      <li class="counselingList__item">
-        <i class="fas fa-check-square check-red"></i>
-        <p class="counselingList__itemText">加齢と共に身体が重くなってきて疲れが抜けない。</p>
-      </li>
-      <li class="counselingList__item">
-        <i class="fas fa-check-square check-red"></i>
-        <p class="counselingList__itemText">精神的に落ち込むことが増えて物事を純粋に楽しめない</p>
-      </li>
-    </ul>
+    <?php the_content(); ?>
     <img class="counselingList__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-05.jpg')) ?>" alt="悩む男性">
     </div>
     <h3 class="counselingTitle">こういった悩みをお持ちの方もご安心ください!!</h3>
@@ -261,7 +239,13 @@ $the_query = new WP_Query($args);
           <p class="directorText">年齢 : </p>
           <p class="directorText">出身 : </p>
           <p class="directorText -certification">保有資格 : <span>VALXスクール認定トレーナー</span><span>日本立腰協会認定トレーナー</span><span>二宮整体アカデミー修士</span></p>
-          <p class="directorText">院長からのメッセージ : </p>
+          <p class="directorText -message">代表挨拶 : <br>僕が整体師になったきっかけは、18歳の時、当時19歳の兄が、リウマチになったことがきっかけでした。お医者様には一生治らないと言われ、兄が絶望していたのを覚えています。
+しかし、ある整体の先生との出会いがきっかけで、見事リウマチが改善されたのです。今では何事もなかったかのように過ごしています。身体を整えることの素晴らしさに感動し、整体を勉強することになりました。
+
+身体を緩めること、骨格の構造通り使うことは、痛み、不調の改善に役立つだけでなく、スポーツパフォーマンス向上、メンタルケアにつながるということがお客様の身体を通して分かりました。今では施術をするだけでなく、自分で身体を緩めるセルフケアの方法をご高齢の方から、ビジネスマン、アスリート、老若男女問わず、お伝えしています。
+私の兄のように痛みや不調で苦しんでいる方、身体の不調に悩まされている方の力になりたいと思っています。
+あなたのお身体の改善を全力でポートできればと考えています！
+お身体のこと、何でも気軽にご相談ください！</p>
         </div>
       </div>
     </div>
