@@ -10,12 +10,15 @@
       </a>
     </div>
     <address class="footerAdress">
-      〒000-0000
+      〒534-0024
       <br>
-      大阪府京橋1丁目1-1-1
+      大阪府大阪市都島区東野田町2丁目3-12
+      <br>
+      ワタラヤベンダービル
     </address>
   </div>
 </footer>
+<small class="footerCopy">©こーちゃん整体院 All rights reserved.</small>
 <?php wp_footer(); ?>
 </body>
 </html>

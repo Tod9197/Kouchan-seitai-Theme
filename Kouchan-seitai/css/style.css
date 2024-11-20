@@ -358,6 +358,22 @@
   line-height: 2;
   letter-spacing: 0.15em;
 }
+.direstorSns__flex {
+  display: flex;
+}
+.direstorSns__icon.-x {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: auto;
+}
 
 /* 特色 */
 .features {
@@ -506,17 +522,30 @@
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2rem;
   color: #000;
-  padding: 2rem 1rem;
-  background: linear-gradient(to bottom, #ffeecc, #fff6e0);
-  border: 1px solid #ff8c00;
-  border-radius: 4px;
+  padding: 3rem 1rem;
+  /* background: linear-gradient(to bottom, #ffeecc, #fff6e0); */
+  border: 3px solid #ff8c00;
+  border-radius: 8px;
   line-height: 1.8;
+  letter-spacing: 0.1em;
   margin-bottom: 4rem;
   position: relative;
-  padding-left: 3rem; /* 左側に余白を追加 */
+  padding-left: 8rem;
   text-indent: -2rem;
+  position: relative;
 }
-
+.reasonList__item:before {
+  font-size: 3.5rem;
+  font-family: "Font Awesome 5 Free";
+  content: "\f0a4";
+  position: absolute;
+  left: 3rem;
+  bottom: 1.2rem;
+  color: #ff8c00;
+}
+.reasonList__item span {
+  font-weight: bold;
+}
 /* 治療の流れ */
 .flow {
   padding: 10rem 0;
@@ -568,6 +597,7 @@
   gap: 4rem;
 }
 .flowList__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -575,9 +605,24 @@
   border: 1px solid #ff914d;
   padding: 1rem;
 }
+.flowList__item::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* 高さを中央揃え */
+  right: -3.5rem; /* 三角形を右側に配置 */
+  transform: translateY(-50%); /* 垂直方向で中央揃え */
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent; /* 上辺（透明部分） */
+  border-bottom: 1.5rem solid transparent; /* 下辺（透明部分） */
+  border-left: 2.5rem solid #ff914d; /* 左辺（三角形の色） */
+}
+.flowList__item:nth-child(3)::before {
+  content: none; /* 擬似要素を無効化 */
+}
 .flowList__itemTitle {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   letter-spacing: 0.1em;
   margin: 2rem 0;
@@ -730,6 +775,7 @@
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 2;
+  margin-bottom: 3rem;
 }
 
 .priceReserve__numberWrap {
@@ -762,6 +808,17 @@
   padding: 2rem;
   display: block;
   text-align: center;
+}
+.priceReserve__lineAdd img {
+  display: block;
+  width: 20rem;
+  height: auto;
+  margin: auto;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+}
+.priceReserve__lineAdd img:hover {
+  opacity: 0.8;
 }
 
 /* お客様の声 */

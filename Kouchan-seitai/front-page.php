@@ -107,14 +107,14 @@
   </div>
   <p class="reasonText">他の整体院との7つ違い</p>
   <ul class="reasonList">
-    <li class="reasonList__item">①カウンセリング・検査・説明に重きを置き、痛みや不調の根本原因を探します。</li>
-    <li class="reasonList__item">②完全予約制なので待ち時間なく施術を受けることができます。</li>
-    <li class="reasonList__item">③あなたに合った日常生活の注意点・
-セルフケアの方法をお伝えします。</li>
-    <li class="reasonList__item">④誰よりもあなたと向き合い、二人三脚で悩みを解決していきます。</li>
-    <li class="reasonList__item">⑤2万人の臨床経験があり身体に対する知識と経験が豊富です。</li>
-    <li class="reasonList__item">⑥その場しのぎの施術は絶対にしません。</li>
-    <li class="reasonList__item">⑦「改善」という結果を提供いたします。</li>
+    <li class="reasonList__item">①<span>カウンセリング・検査・説明</span>に重きを置き、痛みや不調の根本原因を探します。</li>
+    <li class="reasonList__item">②<span>完全予約制</span>なので待ち時間なく施術を受けることができます。</li>
+    <li class="reasonList__item">③あなたに合った<span>日常生活の注意点・
+セルフケア</span>の方法をお伝えします。</li>
+    <li class="reasonList__item">④誰よりもあなたと向き合い、<span>二人三脚</span>で悩みを解決していきます。</li>
+    <li class="reasonList__item">⑤<span>2万人の臨床経験</span>があり身体に対する知識と経験が豊富です。</li>
+    <li class="reasonList__item">⑥<span>その場しのぎの施術</span>は絶対にしません。</li>
+    <li class="reasonList__item">⑦<span>「改善」</span>という結果を提供いたします。</li>
   </ul>
   <a class="counselingTrial__link" href="#trial">
   <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
@@ -150,7 +150,7 @@
         <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-08.jpg')); ?>" alt="問診画像">
       </li>
       <li class="flowList__item">
-        <h3 class="flowList__itemTitle">②施術。</h3>
+        <h3 class="flowList__itemTitle">②施術</h3>
         <p class="flowList__itemText">一人一人に合ったオーダーメイド施術。</p>
         <p class="flowList__itemText">問診の結果を元にその人にベストの施術を行います。
 「バキバキしない」「痛くない」
@@ -235,6 +235,9 @@ $the_query = new WP_Query($args);
         
         <p class="directorName">西垣宏亮(こーちゃん)</p>
         <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="院長画像">
+        <ul class="direstorSns__flex">
+          <li><a class="direstorSns__icon -x" href="https://x.com/kouchanhonesuke/">X</a></li>
+        </ul>
         <div class="directorText__wrap">
           <p class="directorText">年齢 : </p>
           <p class="directorText">出身 : </p>
@@ -290,6 +293,7 @@ $the_query = new WP_Query($args);
       <div class="priceReserve__lineWrap">
         <a class="priceReserve__lineLink">公式LINEで予約・相談</a>
         <p class="priceReserve__lineText"><span class="highlight">「公式LINE」</span>または<span class="highlight">「問い合わせフォーム」</span>からもご予約が可能です。</p>
+        <a class="priceReserve__lineAdd" href="https://lin.ee/zRgydg8" target="_blank" ral="noopener"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
         <p class="priceReserve__lineText">☆ご予約だけでなく、相談や質問にもお答えしていますので、お気軽にご連絡ください☆</p>
       </div>
     </div>

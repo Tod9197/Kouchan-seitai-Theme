@@ -28,6 +28,9 @@
       </a>
     </div>
       <ul class="headerList">
+        <li class="headerList__item">
+          <a class="headerList__item -line" href="https://lin.ee/zRgydg8" target="_blank" ral="noopener"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+        </li>
         <li class="headerList__item -phone">
           <a class="headerList__itemPhone" href="tel:07085407701">
           <i class="fas fa-phone whiteIcon"></i>  
