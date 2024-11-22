@@ -20,9 +20,19 @@ get_header(); ?>
   <div class="accessDetail__wayWrap">
     <h2 class="accessDetail__wayTitle">JR 京橋駅から</h2>
   </div>
-  <div class="accessDetail__wayWrap">
+  <ol class="accessDetail__wayList">
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-01.jpg')); ?>" alt="道順画像1"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-02.jpg')); ?>" alt="道順画像2"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-03.jpg')); ?>" alt="道順画像3"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-04.jpg')); ?>" alt="道順画像4"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-05.jpg')); ?>" alt="道順画像5"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg -sixth" src="<?php echo esc_url(get_theme_file_uri('/img/access-06.jpg')); ?>" alt="道順画像6"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg -seventh" src="<?php echo esc_url(get_theme_file_uri('/img/access-07.jpg')); ?>" alt="道順画像7"></li>
+      <li class="accessDetail__wayItem"><img class="accessDetail__wayImg" src="<?php echo esc_url(get_theme_file_uri('/img/access-08.jpg')); ?>" alt="道順画像1"></li>
+    </ol>
+  <!-- <div class="accessDetail__wayWrap">
     <h2 class="accessDetail__wayTitle">京阪 京橋駅から</h2>
-  </div>
+  </div> -->
 
     <p class="accessDetail__address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタラヤベンダービル</p>
   
