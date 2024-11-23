@@ -1,0 +1,57 @@
+/* お客様の声個別ページ */
+.singleVoices {
+  padding: 20rem 0;
+}
+.singleVoices__titleWrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.singleVoices__titleWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.singleVoices__titleWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.singleVoices__titleSub {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.singleVoices__subTitle {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ff914d;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.singleVoices__content {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.singleVoices__youtube iframe {
+  display: block;
+  width: 100%;
+  height: 50rem;
+  margin-bottom: 5rem;
+}
+.singleVoices__youtube iframe:hover {
+  opacity: 0.8;
+}

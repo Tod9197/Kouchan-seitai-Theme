@@ -171,58 +171,79 @@
 
 
 <!-- お客様の声 -->
+<!-- お客様の声 -->
 <section class="voices">
   <div class="inner">
-<div class="voicesTitle__wrap">
+    <div class="voicesTitle__wrap">
       <p class="voicesTitle__sub">VOICES</p>
       <h2 class="voicesTitle">お客様の声</h2>
-  </div>
-    <p class="voicesText">施術を受け健康状態が良くなったお客様の感想です。</p>
-<?php  
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-$args = [
-  'post_type' => 'voices',
-  'posts_per_page' => 3,
-  'order' => 'DESC',
-  'paged' => $paged
-];
-
-$the_query = new WP_Query($args);
-?>
-
-<?php if($the_query->have_posts()) : ?>
-<ul class="voicesList">
-<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
-<li class="voicesList__item">
-  <a class="voicesList__itemLink" href="<?php the_permalink(); ?>">
-    <?php if(has_post_thumbnail()) : ?>
-      <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-    <?php else : ?>
-      <img src="<?php echo esc_url(get_theme_file_uri('img/bg-paper-01.jpg')) ?>" alt="画像なし">
-    <?php endif; ?>
-    <p class="voicesList__itemText"><?php the_title(); ?></p>
-  </a>
-</li>
-<?php endwhile; ?>
-</ul>
-
- <!-- ページネーション -->
-    <div>
-      <?php  
-      echo paginate_links(array(
-        'total' => $the_query->max_num_pages,
-        'current' => $paged,
-        'prev_text' => __('←'),
-        'next_text' => __('→'),
-      ));
-      ?>
     </div>
-<?php wp_reset_postdata(); ?>
-<?php else : ?>
-  <p>まだ投稿はありません。</p>
-<?php endif; ?>
-</div>
+    <p class="voicesText">施術を受け健康状態が良くなったお客様の感想です。</p>
+
+    <?php  
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+    $args = [
+      'post_type' => 'voices',
+      'posts_per_page' => 3,
+      'order' => 'DESC',
+      'paged' => $paged
+    ];
+
+    $the_query = new WP_Query($args);
+    ?>
+
+    <?php if($the_query->have_posts()) : ?>
+      <ul class="voicesList">
+        <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
+          <li class="voicesList__item">
+            <a class="voicesList__itemLink" href="<?php the_permalink(); ?>">
+              <?php 
+              // カスタムフィールドからYouTubeのURLを取得
+              $youtube_url = get_post_meta(get_the_ID(), 'youtube_url', true);
+              $youtube_thumbnail = '';
+
+              if ($youtube_url) {
+                  // YouTubeの動画IDを抽出
+                  preg_match('/(?:https?:\/\/)?(?:www\.)?youtu(?:be\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|\.be\/)([a-zA-Z0-9_-]{11})/', $youtube_url, $matches);
+                  if (!empty($matches[1])) {
+                      $video_id = $matches[1];
+                      // YouTubeサムネイル画像URLを生成
+                      $youtube_thumbnail = "https://img.youtube.com/vi/{$video_id}/hqdefault.jpg";
+                  }
+              }
+
+              if ($youtube_thumbnail): ?>
+                <img src="<?php echo esc_url($youtube_thumbnail); ?>" alt="<?php the_title(); ?>">
+              <?php elseif(has_post_thumbnail()): ?>
+                <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+              <?php else: ?>
+                <img src="<?php echo esc_url(get_theme_file_uri('img/bg-paper-01.jpg')) ?>" alt="画像なし">
+              <?php endif; ?>
+
+              <p class="voicesList__itemText"><?php the_title(); ?></p>
+              <p class="voicesList__itemText -seocnd">詳しく見る</p>
+            </a>
+          </li>
+        <?php endwhile; ?>
+      </ul>
+
+      <!-- ページネーション -->
+      <div>
+        <?php  
+        echo paginate_links(array(
+          'total' => $the_query->max_num_pages,
+          'current' => $paged,
+          'prev_text' => __('←'),
+          'next_text' => __('→'),
+        ));
+        ?>
+      </div>
+      <?php wp_reset_postdata(); ?>
+    <?php else : ?>
+      <p>まだ投稿はありません。</p>
+    <?php endif; ?>
+  </div>
 </section>
 
  <!-- 代表挨拶 -->

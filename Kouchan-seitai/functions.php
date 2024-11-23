@@ -70,7 +70,7 @@ function custom_post_type_voices(){
     'has_archive' => true,
     'hierarchical' => false,
     'menu_position' => 5,
-    'supports' =>array('title','editor','thumbnail'),
+    'supports' =>array('title','editor','thumbnail','custom-fields'),
   );
   register_post_type('voices',$args);
 
@@ -81,4 +81,6 @@ function custom_post_type_voices(){
 
 add_action('after_setup_theme','mytheme_setup');
 add_action('init','custom_post_type_voices');
+
 ?>
+

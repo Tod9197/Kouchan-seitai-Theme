@@ -893,13 +893,27 @@
 .voicesList__item:hover img {
   /* transform: scale(1.1); */
 }
+.voicesList__itemLink {
+  padding-bottom: 2rem;
+}
 .voicesList__itemText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   color: #333;
-  background-color: #eee;
   text-align: center;
   padding: 1.2rem;
+  margin-bottom: 0.5rem;
   letter-spacing: 0.1em;
+}
+.voicesList__itemText.-seocnd {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  background-color: #ff914d;
+  margin-bottom: 2rem;
 }
