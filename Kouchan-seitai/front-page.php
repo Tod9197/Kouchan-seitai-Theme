@@ -46,13 +46,15 @@
     <?php the_content(); ?>
     <img class="counselingList__img" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-05.jpg')) ?>" alt="悩む男性">
     </div>
-    <h3 class="counselingTitle">こういった悩みをお持ちの方もご安心ください!!</h3>
+    <h3 class="counselingTitle -second">こういった悩みをお持ちの方もご安心ください!!</h3>
     <p class="counselingText">当院の施術で似たような症状をお持ちの方がどんどんと良くなっていっています。</p>
     <p class="counselingText">来院いただく皆様のほとんどはここに来られた時より元気になっていかれます。</p>
   </div>
 
   <a class="counselingTrial__link" href="#trial">
-  <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
+  <p class="counselingTrial">初回キャンペーン価格<span>
+    <br class="tab-only">
+    <?php 
       $page_id = get_option('page_on_front'); 
       $initial_fee = get_post_meta($page_id,'初回料金',true);
       if(!empty($initial_fee)){
@@ -60,7 +62,7 @@
       } else {
         echo ' - ';
       }
-      ?> </span>円実施中！！</p>
+      ?></span> 円<br class="tab-only">実施中！！</p>
   <p class="counselingTrial__text">お試し施術を受けてみる</p>
   </a>
 </section>
@@ -84,7 +86,7 @@
       </li>
       <li class="featuresList__item">
         <img class="featuresList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')) ?>" alt="">
-        <p class="featuresList__itemTag">「触れる」「なでる」「さする」<br>といった優しい施術</p>
+        <p class="featuresList__itemTag">「触れる」「なでる」「さする」<br class="pc-only -sp_block">といった優しい施術</p>
         <p class="featuresList__itemText">高齢者、妊婦さん、小さいお子様でも安心して受けていただけます。非常にソフトで気持ちの良い施術で寝てしまう方もおられます。</p>
       </li>
       <li class="featuresList__item">
@@ -117,7 +119,9 @@
     <li class="reasonList__item">⑦<span>「改善」</span>という結果を提供いたします。</li>
   </ul>
   <a class="counselingTrial__link" href="#trial">
-  <p class="counselingTrial">初回キャンペーン価格<span>  <?php 
+  <p class="counselingTrial">初回キャンペーン価格<span>  
+    <br class="tab-only">
+    <?php 
       $page_id = get_option('page_on_front'); 
       $initial_fee = get_post_meta($page_id,'初回料金',true);
       if(!empty($initial_fee)){
@@ -125,7 +129,7 @@
       } else {
         echo ' - ';
       }
-      ?> </span>円実施中！！</p>
+      ?> </span>円<br class="tab-only">実施中！！</p>
   <p class="counselingTrial__text">お試し施術を受けてみる</p>
   </a>
   </div>
@@ -169,8 +173,6 @@
 </section>
 <!-- 施術の流れここまで -->
 
-
-<!-- お客様の声 -->
 <!-- お客様の声 -->
 <section class="voices">
   <div class="inner">

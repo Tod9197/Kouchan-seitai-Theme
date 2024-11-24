@@ -94,7 +94,7 @@
 .aboutImg__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 2rem;
 }
 .aboutImg__listItem {
   height: 24rem;
@@ -107,7 +107,7 @@
 
 /* <!-- 悩み解決 --> */
 .counseling {
-  padding: 10rem;
+  padding: 10rem 0;
 }
 .counselingTitle {
   font-family: "Noto Serif JP", serif;
@@ -184,6 +184,9 @@
 .counselingList__img {
   width: 45%;
   height: auto;
+  object-fit: cover;
+  outline: 3px solid #fff;
+  box-shadow: 6px 6px #ffd79a;
 }
 .counselingText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -194,7 +197,7 @@
 }
 
 .counselingTrial__link {
-  width: 50%;
+  width: 70%;
   display: block;
   margin: auto;
   margin-top: 10rem;
@@ -232,12 +235,12 @@
   font-weight: bold;
   color: #000;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   letter-spacing: 0.1em;
 }
 .counselingTrial span {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   background: linear-gradient(
     45deg,
     #ff0000 30%,
@@ -510,31 +513,30 @@
   font-size: 2rem;
   color: #333;
   letter-spacing: 0.1em;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 .reasonList {
   display: flex;
   flex-direction: column;
 }
 .reasonList__item {
-  width: 100%;
+  width: 85%;
   max-width: 1000px;
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2rem;
   color: #000;
-  padding: 3rem 1rem;
-  /* background: linear-gradient(to bottom, #ffeecc, #fff6e0); */
+  padding: 3rem 1rem 3rem 5rem;
   border: 3px solid #ff8c00;
   border-radius: 8px;
   line-height: 1.8;
   letter-spacing: 0.1em;
   margin-bottom: 4rem;
   position: relative;
-  padding-left: 8rem;
   text-indent: -2rem;
   position: relative;
+  overflow: auto;
 }
-.reasonList__item:before {
+/* .reasonList__item:before {
   font-size: 3.5rem;
   font-family: "Font Awesome 5 Free";
   content: "\f0a4";
@@ -543,7 +545,7 @@
   bottom: 3rem;
   color: #ff8c00;
   transform: rotate(-90deg);
-}
+} */
 .reasonList__item span {
   font-weight: bold;
 }
@@ -894,7 +896,13 @@
   /* transform: scale(1.1); */
 }
 .voicesList__itemLink {
-  padding-bottom: 2rem;
+  display: block;
+  height: inherit;
+  border: 1px solid #ff8c00;
+  padding-bottom: 11rem;
+}
+.voicesList__itemLink :hover {
+  opacity: 0.7;
 }
 .voicesList__itemText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -916,4 +924,206 @@
   padding: 1rem;
   background-color: #ff914d;
   margin-bottom: 2rem;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  .about,
+  .counseling,
+  .features,
+  .reason {
+    padding: 5rem 0;
+  }
+  .aboutTitle__wrap,
+  .counselingTitle__wrap,
+  .featuresTitle__wrap,
+  .reasonTitle__wrap {
+    padding-top: 3rem;
+  }
+  .aboutTitle__sub,
+  .counselingTitle__sub,
+  .featuresTitle__sub,
+  .reasonTitle__sub {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .aboutTitle__flex::after,
+  .counselingTitle__wrap::after,
+  .featuresTitle__wrap::after,
+  .reasonTitle__wrap::after {
+    width: 20rem;
+  }
+  .aboutTitle,
+  .counselingTitle,
+  .featuresTitle,
+  .reasonTitle {
+    font-size: 2rem;
+  }
+  .aboutText,
+  .featuresText,
+  .reasonText {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  /* 当院について */
+  .aboutText__second {
+    font-size: 1.4rem;
+  }
+  .aboutImg__list {
+    gap: 1rem;
+  }
+  .aboutImg__listItem {
+    height: 15rem;
+  }
+  /* 悩み解決 */
+  .counselingFlex {
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  .counselingList {
+    width: 100%;
+  }
+  .counselingList__item {
+    margin-bottom: 3rem;
+  }
+
+  .counselingList__img {
+    width: 60%;
+  }
+  .counselingTitle.-second {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .counselingText {
+    font-size: 1.4rem;
+  }
+  .counselingTrial {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .counselingTrial__link {
+    width: 80%;
+    margin-top: 5rem;
+    padding: 1rem 0 2rem;
+    line-height: 1.8;
+  }
+  /* 特色 */
+  .featuresList {
+    gap: 2rem;
+  }
+  .featuresList__itemImg {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .featuresList__itemTag {
+    font-size: 1.6rem;
+  }
+  .featuresList__itemText {
+    font-size: 1.4rem;
+  }
+  /* 理由 */
+  .reasonList__item {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .aboutTitle__sub,
+  .counselingTitle__sub,
+  .featuresTitle__sub,
+  .reasonTitle__sub {
+    font-size: 2.5rem;
+  }
+  .aboutTitle,
+  .counselingTitle,
+  .featuresTitle,
+  .reasonTitle {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+  .aboutTitle__flex,
+  .counselingFlex {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .aboutTitle__flex::after,
+  .counselingTitle__wrap::after,
+  .featuresTitle__wrap::after,
+  .reasonTitle__wrap::after {
+    width: 15rem;
+  }
+  /* 当院について */
+  .aboutTitle__img {
+    width: 95%;
+    margin-top: 0;
+  }
+  .aboutText,
+  .featuresText,
+  .reasonText {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .aboutText__second {
+    font-size: 1.2rem;
+  }
+  .aboutImg__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .aboutImg__listItem:last-child {
+    display: none;
+  }
+  /* 悩み解決 */
+  .counselingList__item {
+    align-items: unset;
+    margin-bottom: 2rem;
+  }
+  .check-red {
+    padding-top: 0.4rem;
+  }
+  .counselingList__itemText {
+    font-size: 1.4rem;
+  }
+  .check-red {
+    font-size: 2rem;
+  }
+  .counselingList__img {
+    width: 95%;
+  }
+  .counselingText {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .counselingTrial__link {
+    width: 90%;
+  }
+  .counselingTrial {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  .counselingTrial span {
+    font-size: 3.5rem;
+  }
+  .counselingTrial__text {
+    font-size: 1.8rem;
+  }
+
+  /* 特色 */
+  .featuresList {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  .featuresList__itemImg {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  /* 理由 */
+  .reasonList__item {
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem 1.5rem 3rem;
+    text-indent: -1.5rem;
+    margin-bottom: 2rem;
+  }
 }

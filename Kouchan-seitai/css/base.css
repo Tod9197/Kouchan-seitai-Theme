@@ -136,3 +136,35 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+/* 共通改行 */
+.pc-only {
+  display: block;
+}
+.pc-only.-sp_block {
+  display: block;
+}
+.tab-only {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+  .pc-only.-sp_block {
+    display: none;
+  }
+  .tab-only {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+  .pc-only.-sp_block {
+    display: block;
+  }
+  .tab-only {
+    display: block;
+  }
+}
