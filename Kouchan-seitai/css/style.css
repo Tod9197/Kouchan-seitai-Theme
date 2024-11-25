@@ -931,32 +931,37 @@
   .about,
   .counseling,
   .features,
-  .reason {
+  .reason,
+  .flow {
     padding: 5rem 0;
   }
   .aboutTitle__wrap,
   .counselingTitle__wrap,
   .featuresTitle__wrap,
-  .reasonTitle__wrap {
+  .reasonTitle__wrap,
+  .flowTitle__wrap {
     padding-top: 3rem;
   }
   .aboutTitle__sub,
   .counselingTitle__sub,
   .featuresTitle__sub,
-  .reasonTitle__sub {
+  .reasonTitle__sub,
+  .flowTitle__sub {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
   .aboutTitle__flex::after,
   .counselingTitle__wrap::after,
   .featuresTitle__wrap::after,
-  .reasonTitle__wrap::after {
+  .reasonTitle__wrap::after,
+  .flowTitle__wrap::after {
     width: 20rem;
   }
   .aboutTitle,
   .counselingTitle,
   .featuresTitle,
-  .reasonTitle {
+  .reasonTitle,
+  .flowTitle {
     font-size: 2rem;
   }
   .aboutText,
@@ -1026,18 +1031,30 @@
     font-size: 1.4rem;
     margin-bottom: 3rem;
   }
+  /* 施術の流れ */
+  .flowList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .flowList__item {
+    /* padding: 1rem 3rem 3rem 3rem; */
+  }
+  .flowList__itemImg {
+    aspect-ratio: 400/200;
+  }
 }
 @media screen and (max-width: 480px) {
   .aboutTitle__sub,
   .counselingTitle__sub,
   .featuresTitle__sub,
-  .reasonTitle__sub {
+  .reasonTitle__sub,
+  .flowTitle__sub {
     font-size: 2.5rem;
   }
   .aboutTitle,
   .counselingTitle,
   .featuresTitle,
-  .reasonTitle {
+  .reasonTitle,
+  .flowTitle {
     font-size: 1.6rem;
     margin-bottom: 3rem;
   }
@@ -1049,7 +1066,8 @@
   .aboutTitle__flex::after,
   .counselingTitle__wrap::after,
   .featuresTitle__wrap::after,
-  .reasonTitle__wrap::after {
+  .reasonTitle__wrap::after,
+  .flowTitle__wrap::after {
     width: 15rem;
   }
   /* 当院について */
