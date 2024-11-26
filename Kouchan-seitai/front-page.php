@@ -229,18 +229,6 @@
           </li>
         <?php endwhile; ?>
       </ul>
-
-      <!-- ページネーション -->
-      <div>
-        <?php  
-        echo paginate_links(array(
-          'total' => $the_query->max_num_pages,
-          'current' => $paged,
-          'prev_text' => __('←'),
-          'next_text' => __('→'),
-        ));
-        ?>
-      </div>
       <?php wp_reset_postdata(); ?>
     <?php else : ?>
       <p>まだ投稿はありません。</p>
@@ -258,9 +246,6 @@
         
         <p class="directorName">西垣宏亮(こーちゃん)</p>
         <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="院長画像">
-        <ul class="direstorSns__flex">
-          <li><a class="direstorSns__icon -x" href="https://x.com/kouchanhonesuke/">X</a></li>
-        </ul>
         <div class="directorText__wrap">
           <p class="directorText">年齢 : </p>
           <p class="directorText">出身 : </p>
@@ -299,8 +284,7 @@
       } else {
         echo ' - ';
       }
-      ?>  
-      円</span> </p>
+      ?>円</span> </p>
         <p class="priceText__trial -second">施術時間目安：約60分</p>
       </div>
         <!-- 電話問い合わせ -->
@@ -315,7 +299,7 @@
       <!-- LINEorお問い合わせフォーム -->
       <div class="priceReserve__lineWrap">
         <a class="priceReserve__lineLink">公式LINEで予約・相談</a>
-        <p class="priceReserve__lineText"><span class="highlight">「公式LINE」</span>または<span class="highlight">「問い合わせフォーム」</span>からもご予約が可能です。</p>
+        <p class="priceReserve__lineText"><span class="highlight">「公式LINE」からもご予約が可能です。</p>
         <a class="priceReserve__lineAdd" href="https://lin.ee/zRgydg8" target="_blank" ral="noopener"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
         <p class="priceReserve__lineText">☆ご予約だけでなく、相談や質問にもお答えしていますので、お気軽にご連絡ください☆</p>
       </div>

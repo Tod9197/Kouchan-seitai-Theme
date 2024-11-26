@@ -157,7 +157,11 @@ body {
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .inner {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
   .pc-only {
     display: none;
   }

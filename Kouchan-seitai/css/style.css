@@ -337,7 +337,7 @@
   margin: auto;
 }
 .directorText__wrap {
-  padding: 15rem 5rem 5rem 5rem;
+  padding: 5rem;
   border: 5px double #ffd79a;
   margin-top: 2rem;
 }
@@ -717,7 +717,6 @@
   margin-bottom: 4rem;
 }
 .priceText__trialWrap {
-  width: 100%;
   height: auto;
   padding: 4rem 0;
   margin-bottom: 8rem;
@@ -870,10 +869,10 @@
 }
 .voicesText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #333;
   letter-spacing: 0.1em;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 .voicesList {
   display: grid;
@@ -897,7 +896,7 @@
 }
 .voicesList__itemLink {
   display: block;
-  height: inherit;
+  height: 100%;
   border: 1px solid #ff8c00;
   padding-bottom: 11rem;
 }
@@ -927,26 +926,65 @@
 }
 
 /* レスポンシブ */
+@media screen and (max-width: 1024px) {
+  .voicesList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15rem 0;
+  }
+  .priceText__wrap {
+    padding: 5rem 2rem;
+  }
+  .priceText {
+    font-size: 3.5rem;
+  }
+  .priceText span {
+    font-size: 6rem;
+  }
+  .priceText__arrow {
+    font-size: 5rem;
+  }
+  .priceText__trial {
+    font-size: 3.5rem;
+  }
+  .priceText__trial span {
+    font-size: 6rem;
+  }
+  .priceText__trial.-second {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about,
   .counseling,
   .features,
   .reason,
-  .flow {
+  .flow,
+  .director,
+  .price {
     padding: 5rem 0;
+  }
+  .voices {
+    padding: 5rem 0 15rem 0;
   }
   .aboutTitle__wrap,
   .counselingTitle__wrap,
   .featuresTitle__wrap,
   .reasonTitle__wrap,
-  .flowTitle__wrap {
+  .flowTitle__wrap,
+  .voicesTitle__wrap,
+  .directorTitle__wrap,
+  .priceTitle__wrap {
     padding-top: 3rem;
   }
   .aboutTitle__sub,
   .counselingTitle__sub,
   .featuresTitle__sub,
   .reasonTitle__sub,
-  .flowTitle__sub {
+  .flowTitle__sub,
+  .voicesTitle__sub,
+  .directorTitle__sub,
+  .priceTitle__sub {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
@@ -954,14 +992,20 @@
   .counselingTitle__wrap::after,
   .featuresTitle__wrap::after,
   .reasonTitle__wrap::after,
-  .flowTitle__wrap::after {
+  .flowTitle__wrap::after,
+  .voicesTitle__wrap::after,
+  .directorTitle__wrap::after,
+  .priceTitle__wrap::after {
     width: 20rem;
   }
   .aboutTitle,
   .counselingTitle,
   .featuresTitle,
   .reasonTitle,
-  .flowTitle {
+  .flowTitle,
+  .voicesTitle,
+  .directorTitle,
+  .priceTitle {
     font-size: 2rem;
   }
   .aboutText,
@@ -1034,12 +1078,75 @@
   /* 施術の流れ */
   .flowList {
     grid-template-columns: repeat(1, 1fr);
+    gap: 8rem;
   }
   .flowList__item {
     /* padding: 1rem 3rem 3rem 3rem; */
   }
+  .flowList__item::before {
+    right: 50%;
+    top: unset;
+    bottom: -6rem;
+    transform: translateY(-50%) rotate(90deg);
+  }
   .flowList__itemImg {
     aspect-ratio: 400/200;
+  }
+  /* お客様の声 */
+  .voicesList {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15rem 0;
+  }
+  /* 代表挨拶 */
+  .directorName {
+    font-size: 2.8rem;
+  }
+  .directorImg {
+    width: 25rem;
+    height: 25rem;
+  }
+  .directorText__wrap {
+    padding: 4rem 3rem;
+  }
+  .directorText {
+    font-size: 1.4rem;
+  }
+  .directorText.-message {
+    margin-bottom: 0;
+  }
+  /* 料金 */
+  .priceText,
+  .priceText__trial {
+    font-size: 2.5rem;
+  }
+  .priceText {
+    margin-bottom: 3rem;
+  }
+  .priceText span,
+  .priceText__trial span {
+    font-size: 4.5rem;
+  }
+  .priceText__arrow {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+  .priceText__trial.-second {
+    font-size: 1.8rem;
+  }
+  .priceReserve__numberText {
+    font-size: 2.4rem;
+  }
+  .priceReserve__number {
+    font-size: 4.5rem;
+  }
+  .whiteIcon.-price {
+    font-size: 2.5rem;
+  }
+  .priceReserve__numberText.-second {
+    margin-bottom: 3rem;
+  }
+  .priceReserve__lineLink {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1047,14 +1154,20 @@
   .counselingTitle__sub,
   .featuresTitle__sub,
   .reasonTitle__sub,
-  .flowTitle__sub {
+  .flowTitle__sub,
+  .voicesTitle__sub,
+  .directorTitle__sub,
+  .priceTitle__sub {
     font-size: 2.5rem;
   }
   .aboutTitle,
   .counselingTitle,
   .featuresTitle,
   .reasonTitle,
-  .flowTitle {
+  .flowTitle,
+  .voicesTitle,
+  .directorTitle,
+  .priceTitle {
     font-size: 1.6rem;
     margin-bottom: 3rem;
   }
@@ -1067,7 +1180,10 @@
   .counselingTitle__wrap::after,
   .featuresTitle__wrap::after,
   .reasonTitle__wrap::after,
-  .flowTitle__wrap::after {
+  .flowTitle__wrap::after,
+  .voicesTitle__wrap::after,
+  .directorTitle__wrap::after,
+  .priceTitle__wrap::after {
     width: 15rem;
   }
   /* 当院について */
@@ -1077,8 +1193,9 @@
   }
   .aboutText,
   .featuresText,
-  .reasonText {
-    font-size: 1.6rem;
+  .reasonText,
+  .voicesText {
+    font-size: 1.4rem;
     line-height: 1.8;
     margin-bottom: 2rem;
   }
@@ -1142,6 +1259,74 @@
     font-size: 1.2rem;
     padding: 1.5rem 1rem 1.5rem 3rem;
     text-indent: -1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* お客様の声 */
+  .voicesList__itemText {
+    font-size: 1.4rem;
+  }
+  .voicesList__itemText.-seocnd {
+    font-size: 1.6rem;
+  }
+
+  /* 代表挨拶 */
+  .directorName {
+    font-size: 2.4rem;
+  }
+  .directorImg {
+    width: 20rem;
+    height: 20rem;
+  }
+  /* 料金 */
+  .priceText__wrap {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+  .priceText {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .priceText span {
+    font-size: 3rem;
+  }
+  .priceText__arrow {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .priceText__trialWrap {
+    margin-bottom: 5rem;
+  }
+  .priceText__trial {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+  .priceText__trial span {
+    font-size: 3rem;
+  }
+  .priceReserve__numberText {
+    font-size: 2rem;
+  }
+  .priceReserve__numberWrap {
+    margin-bottom: 3rem;
+  }
+  .priceReserve__number {
+    font-size: 3rem;
+  }
+  .whiteIcon.-price {
+    font-size: 1.5rem;
+  }
+  .priceReserve__numberText.-second {
+    font-size: 1.2rem;
+  }
+  .priceReserve__lineLink {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .priceReserve__lineText {
+    font-size: 1.2rem;
+  }
+  .priceReserve__lineAdd img {
+    width: 15rem;
     margin-bottom: 2rem;
   }
 }

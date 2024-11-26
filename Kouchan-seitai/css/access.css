@@ -48,6 +48,7 @@
   color: #333;
   letter-spacing: 0.1em;
   margin-bottom: 4rem;
+  line-height: 1.6;
 }
 .accessText.-address {
   font-weight: bold;
@@ -74,7 +75,7 @@
 .accessList__link {
   font-family: "Noto Serif JP", serif;
   display: block;
-  width: 40%;
+  width: 50%;
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -82,8 +83,9 @@
   background-color: #ff914d;
   text-align: center;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 3rem;
   border: 1px solid #ff8c00;
+  line-height: 1.6;
 }
 .accessList__link:hover {
   color: #ff914d;
@@ -235,4 +237,49 @@
 .accessDetail__wayImg.-sixth,
 .accessDetail__wayImg.-seventh {
   object-position: top;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  .access {
+    padding: 5rem 0;
+  }
+  .accessTitle__wrap {
+    padding-top: 3rem;
+  }
+  .accessTitle__sub {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .accessTitle__wrap::after {
+    width: 20rem;
+  }
+  .accessTitle {
+    font-size: 2rem;
+  }
+  .accessList__link {
+    width: 60%;
+    font-size: 1.6rem;
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accessTitle__sub {
+    font-size: 2.5rem;
+  }
+  .accessTitle__wrap::after {
+    width: 15rem;
+  }
+  .accessTitle {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+  .accessText {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .accessList__link {
+    width: 70%;
+    font-size: 1.2rem;
+  }
 }
