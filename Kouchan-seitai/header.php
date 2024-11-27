@@ -45,19 +45,22 @@
   <nav class="headerUnder__navWrap">
     <ul class="headerUnder__nav">
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">お客様の声</a>
+      <a href="#features" class="headerUnder__navItem">当院の特色</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">施術の流れ</a>
+      <a href="#flow" class="headerUnder__navItem">施術の流れ</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">施術料金</a>
+      <a href="#voices" class="headerUnder__navItem">お客様の声</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">アクセス</a>
+      <a href="#price" class="headerUnder__navItem">施術料金</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">お問い合わせ</a>
+      <a href="#access" class="headerUnder__navItem">アクセス</a>
+    </li>
+    <li class="headerUnder__navList">
+      <a href="#contact" class="headerUnder__navItem">お問い合わせ</a>
     </li>
     </ul>
   </nav>

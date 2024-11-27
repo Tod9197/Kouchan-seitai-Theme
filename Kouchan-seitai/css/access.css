@@ -58,16 +58,15 @@
 
 .accessList {
   display: flex;
-  margin: 5rem 0 10rem;
+  flex-direction: column;
+  margin: 3rem 0 10rem;
 }
 .accessList__item {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2rem;
   color: #333;
-  list-style: disc;
   letter-spacing: 0.1em;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 .accessList__item span {
   font-weight: bold;
@@ -262,6 +261,9 @@
     font-size: 1.6rem;
     padding: 2rem 4rem;
   }
+  .accessList__item {
+    font-size: 1.6rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .accessTitle__sub {
@@ -278,8 +280,14 @@
     font-size: 1.4rem;
     margin-bottom: 2rem;
   }
+  .accessList {
+    margin: 3rem 0 3rem;
+  }
   .accessList__link {
     width: 70%;
     font-size: 1.2rem;
+  }
+  .accessList__item {
+    font-size: 1.4rem;
   }
 }

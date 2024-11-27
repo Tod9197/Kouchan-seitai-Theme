@@ -69,7 +69,7 @@
 <!-- 悩み解決ここまで -->
 
 <!-- 特色 -->
-<section class="features">
+<section class="features" id="features">
   <div class="inner">
 
   <div class="featuresTitle__wrap">
@@ -137,7 +137,7 @@
 <!-- 選ばれる理由ここまで -->
 
 <!-- 施術の流れ -->
-<section class="flow">
+<section class="flow" id="flow">
   <div class="inner">
     <div class="flowTitle__wrap">
       <p class="flowTitle__sub">FLOW</p>
@@ -174,7 +174,7 @@
 <!-- 施術の流れここまで -->
 
 <!-- お客様の声 -->
-<section class="voices">
+<section class="voices" id="voices">
   <div class="inner">
     <div class="voicesTitle__wrap">
       <p class="voicesTitle__sub">VOICES</p>
@@ -247,8 +247,6 @@
         <p class="directorName">西垣宏亮(こーちゃん)</p>
         <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="院長画像">
         <div class="directorText__wrap">
-          <p class="directorText">年齢 : </p>
-          <p class="directorText">出身 : </p>
           <p class="directorText -certification">保有資格 : <span>VALXスクール認定トレーナー</span><span>日本立腰協会認定トレーナー</span><span>二宮整体アカデミー修士</span></p>
           <p class="directorText -message">代表挨拶 : <br>僕が整体師になったきっかけは、18歳の時、当時19歳の兄が、リウマチになったことがきっかけでした。お医者様には一生治らないと言われ、兄が絶望していたのを覚えています。
 しかし、ある整体の先生との出会いがきっかけで、見事リウマチが改善されたのです。今では何事もなかったかのように過ごしています。身体を整えることの素晴らしさに感動し、整体を勉強することになりました。
@@ -263,7 +261,7 @@
 
 
     <!-- 治療料金 -->
-<section class="price">
+<section class="price" id="price">
   <div class="inner">
 
   <div class="priceTitle__wrap" id="trial">
@@ -272,7 +270,7 @@
     </div>
 
     <div class="priceText__wrap">
-      <p class="priceText">診察料 : <span>8,800円</span></p>
+      <p class="priceText">施術料 : <span>8,800円</span></p>
       <span class="priceText__arrow">⬇︎</span>
       <div class="priceText__trialWrap">
       <p class="priceText__trial">初回お試し価格 : <span>
@@ -285,10 +283,10 @@
         echo ' - ';
       }
       ?>円</span> </p>
-        <p class="priceText__trial -second">施術時間目安：約60分</p>
+        <p class="priceText__trial -second">施術時間目安：約60分~90分</p>
       </div>
         <!-- 電話問い合わせ -->
-      <p class="priceReserve__numberText">診察予約はお電話で</p>
+      <p class="priceReserve__numberText" id="contact">ご予約はお電話で</p>
       <div class="priceReserve__numberWrap">
           <a class="priceReserve__number" href="tel:07085407701">
           <i class="fas fa-phone whiteIcon -price"></i>  
@@ -309,18 +307,24 @@
 
 
 <!-- アクセス -->
-<section class="access">
+<section class="access" id="access">
   <div class="inner">
   <div class="accessTitle__wrap">
       <p class="accessTitle__sub">ACCESS</p>
       <h2 class="accessTitle">アクセス</h2>
   </div>
     <p class="accessText">当院の住所です。大阪京橋の各線からすぐの便利な立地にあります。</p>
-    <p class="accessText -address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタラヤベンダービル</p>
+    <p class="accessText -address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタヤラベンダービル 402号</p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3134778998983!2d135.52912637574414!3d34.697272472921036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d637602daf%3A0xf32f0b08d38ddc4b!2z44CSNTM0LTAwMjQg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65p2x6YeO55Sw55S677yS5LiB55uu77yT4oiS77yR77ySIOODr-OCv-ODpOODqeODmeODs-ODgOODvOODk-ODqw!5e0!3m2!1sja!2sjp!4v1731721786323!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <ul class="accessList">
-        <li class="accessList__item"><span>京阪京橋駅</span>から徒歩で約3分</li>
-        <li class="accessList__item"><span>JR京橋駅</span>から徒歩で約3分</li>
+        <li class="accessList__item">
+        <i class="fas fa-train custom-train-icon"></i>  
+        <i class="fas fa-person-walking"></i>
+        <span>京阪京橋駅</span>から徒歩で約3分</li>
+        <li class="accessList__item">
+        <i class="fas fa-train custom-train-icon"></i>  
+        <i class="fas fa-person-walking"></i>  
+        <span>JR京橋駅</span>から徒歩で約3分</li>
       </ul>
       <a class="accessList__link" href="<?php echo esc_url('/access-detail'); ?>">駅からの具体的なアクセスはこちら</a>
   </div>

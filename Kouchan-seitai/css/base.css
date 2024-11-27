@@ -146,6 +146,17 @@ body {
 .tab-only {
   display: none;
 }
+/* スクロール位置調整 */
+#features,
+#flow,
+#voices,
+#price,
+#access {
+  scroll-margin-top: 7rem;
+}
+#contact {
+  scroll-margin-top: 15rem;
+}
 @media screen and (max-width: 768px) {
   .pc-only {
     display: none;

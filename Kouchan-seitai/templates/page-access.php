@@ -34,7 +34,7 @@ get_header(); ?>
     <h2 class="accessDetail__wayTitle">京阪 京橋駅から</h2>
   </div> -->
 
-    <p class="accessDetail__address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタラヤベンダービル</p>
+    <p class="accessDetail__address">〒534-0024<br>大阪府大阪市都島区東野田町2丁目3-12 ワタヤラベンダービル 402号</p>
   
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3134778998983!2d135.52912637574414!3d34.697272472921036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d637602daf%3A0xf32f0b08d38ddc4b!2z44CSNTM0LTAwMjQg5aSn6Ziq5bqc5aSn6Ziq5biC6YO95bO25Yy65p2x6YeO55Sw55S677yS5LiB55uu77yT4oiS77yR77ySIOODr-OCv-ODpOODqeODmeODs-ODgOODvOODk-ODqw!5e0!3m2!1sja!2sjp!4v1731721786323!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
