@@ -2,12 +2,30 @@
 .mainViusal {
   width: 100%;
   height: 100vh;
-  background: url(../img/seitai-02.jpg);
+  position: relative;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #fce3c5,
+    #fbd1a7 30%,
+    #f9b89c 60%,
+    #f4b8a4 80%,
+    /* ピンクをオレンジ寄りに */ #e8c5a4 /* 最後の色も少しオレンジ寄りに調整 */
+  );
+}
+.mainViusal::after {
+  content: "";
+  width: 30rem;
+  height: 30rem;
+  background: url(../img/kouchan-01.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
-  z-index: -1;
+  border-radius: 50%;
+  border: 2px solid #ff914d;
+  position: absolute;
+  top: 20rem;
+  right: 5rem;
 }
 
 /* 当院について */
