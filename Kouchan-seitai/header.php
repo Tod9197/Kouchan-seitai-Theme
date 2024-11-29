@@ -40,13 +40,17 @@
           </a>
         </li>
       </ul>
+        <!-- ハンバーガーメニュー -->
+     <button class="hamburgerBtn" id="js-hamburgerBtn">
+      <span id="js-hamburgeLine__first"></span>
+      <span id="js-hamburgeLine__second"></span>
+      <span id="js-hamburgeLine__third"></span>
+     </button>
     </div>
+
   </header>
   <nav class="headerUnder__navWrap">
     <ul class="headerUnder__nav">
-    <li class="headerUnder__navList">
-      <a href="#features" class="headerUnder__navItem">当院の特色</a>
-    </li>
     <li class="headerUnder__navList">
       <a href="#flow" class="headerUnder__navItem">施術の流れ</a>
     </li>
@@ -55,6 +59,9 @@
     </li>
     <li class="headerUnder__navList">
       <a href="#price" class="headerUnder__navItem">施術料金</a>
+    </li>
+    <li class="headerUnder__navList">
+      <a href="" class="headerUnder__navItem">ブログ</a>
     </li>
     <li class="headerUnder__navList">
       <a href="#access" class="headerUnder__navItem">アクセス</a>

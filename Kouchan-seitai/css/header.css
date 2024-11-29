@@ -133,3 +133,69 @@
 .headerUnder__navItem:hover::after {
   width: 50%;
 }
+
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+  .headerLogo {
+    font-size: 3rem;
+  }
+  .headerList__itemPhone {
+    font-size: 2rem;
+  }
+  .whiteIcon {
+    font-size: 1.6rem;
+  }
+  .headerUnder__navItem {
+    padding: 2rem 1rem;
+  }
+  .hamburgerBtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 8rem;
+  }
+  .headerLogo {
+    font-size: 2.4rem;
+  }
+  .headerList {
+    display: none;
+  }
+  .headerUnder__navWrap {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: block;
+    width: 40px;
+    height: 35px;
+    background-color: transparent;
+    position: relative;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    border: none;
+  }
+  .hamburgerBtn span {
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  .hamburgerBtn span:nth-child(1) {
+    top: 0.8rem;
+  }
+  .hamburgerBtn span:nth-child(2) {
+    top: 1.6rem;
+  }
+  .hamburgerBtn span:nth-child(3) {
+    top: 2.4rem;
+  }
+  .hamburgerBtn span.opacity {
+    opacity: 0;
+  }
+}
