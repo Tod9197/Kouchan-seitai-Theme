@@ -3,8 +3,52 @@
 
 <!-- メインビジュアル -->
 
-<div class="mainViusal">
+<div class="mainVisual">
+  <div class="mainVisual__inner">
+    <div class="mainVisual__titleFlex">
+      <div class="mainVisual__titleWrap">
+      <h1 class="mainVisual__title">痛くない、快適な施術<br>身体が根本から変わる!!<br>京橋で一番優しい整体院<br></h1>
+      <p class="mainVisual__text">
+        頭痛、肩こり、胃痛、腰痛、足の痛み、心の不調など、<br class="pc-only">あらゆる症状を改善。<br>
+        親切・丁寧にご対応させていただきます。
+      </p>
+    </div>
+    <div class="mainVisual__imgWrap">
+      <div class="mainVisual__ballon">
+        <p class="mainVisual__ballonText">お身体の悩み<br>何でもご相談ください!！</p>
+      </div>
+      <div class="mainVisual__imgBox">
+        <img class="mainVisual__img" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="代表画像">
+      </div>
+    </div>
+  </div>
 
+  <ul class="mainVisual__tagFlex">
+    <li class="mainVisual__tagItem">
+      <p class="mainVisual__tagText">京橋駅<br>徒歩3分</p>
+    </li>
+    <li class="mainVisual__tagItem">
+      <p class="mainVisual__tagText">
+        初回価格<br>
+        <?php 
+        $page_id = get_option('page_on_front'); 
+        $initial_fee = get_post_meta($page_id,'初回料金',true);
+        if(!empty($initial_fee)){
+            echo $initial_fee;
+          } else {
+            echo ' - ';
+          }
+      ?>円!!
+      </p>
+    </li>
+    <li class="mainVisual__tagItem">
+      <p class="mainVisual__tagText">カード決済可</p>
+    </li>
+    <li class="mainVisual__tagItem">
+      <p class="mainVisual__tagText">土日施術可</p>
+    </li>
+  </ul>
+  </div>
 </div>
 
 
@@ -17,7 +61,7 @@
         <p class="aboutTitle__sub">ABOUT</p>
         <h2 class="aboutTitle">こーちゃん整体院とは</h2>
       </div>
-      <img class="aboutTitle__img" src="<?php echo esc_url(get_theme_file_uri('img/seitai-03.jpg')) ?>" alt="施術画像">
+      <img class="aboutTitle__img" src="<?php echo esc_url(get_theme_file_uri('img/seitai-09.jpg')) ?>" alt="施術画像">
     </div>
     <p class="aboutText">痛くない、身体がどんどん楽に気持ち良くなる施術</p>
     <p class="aboutText__second">当院ではよくありがちな<span class="highlight">「ボキボキと骨をならす」</span>　<span class="highlight">「強く揉んでマッサージする」</span><br>といった整体院でよくありがちな施術を一切行いません。</p>
@@ -244,7 +288,7 @@
         <h2 class="directorTitle">代表挨拶</h2>
         </div>
         
-        <p class="directorName">西垣宏亮(こーちゃん)</p>
+        <p class="directorName">西垣宏亮(にしがき こうすけ)</p>
         <img class="directorImg" src="<?php echo esc_url(get_theme_file_uri('/img/kouchan-01.png')); ?>" alt="院長画像">
         <div class="directorText__wrap">
           <p class="directorText -certification">保有資格 : <span>VALXスクール認定トレーナー</span><span>日本立腰協会認定トレーナー</span><span>二宮整体アカデミー修士</span></p>

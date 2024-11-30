@@ -41,33 +41,66 @@
         </li>
       </ul>
         <!-- ハンバーガーメニュー -->
-     <button class="hamburgerBtn" id="js-hamburgerBtn">
-      <span id="js-hamburgeLine__first"></span>
-      <span id="js-hamburgeLine__second"></span>
-      <span id="js-hamburgeLine__third"></span>
-     </button>
+    <button class="hamburgerBtn" id="js-hamburgerBtn">
+      <span id="js-hamburgerLine__first"></span>
+      <span id="js-hamburgerLine__second"></span>
+      <span id="js-hamburgerLine__third"></span>
+    </button>
+
+    <nav class="hamburgerNav" id="js-hamburgerNav">
+      <ul class="hamburgerNav__list">
+        <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('#flow'));?>" class="hamburgerNav__link">施術の流れ</a>
+      </li>
+      <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('#voices'));?>" class="hamburgerNav__link">お客様の声</a>
+      </li>
+      <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('#price'));?>" class="hamburgerNav__link">施術料金</a>
+      </li>
+      <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('/blog'));?>" class="hamburgerNav__link">ブログ</a>
+      </li>
+      <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('#access'));?>" class="hamburgerNav__link">アクセス</a>
+      </li>
+      <li class="hamburgerNav__item">
+      <a href="<?php echo esc_url(home_url('#contact'));?>" class="hamburgerNav__link">お問い合わせ</a>
+      </li>
+      <li class="hamburgerNav__item -phone">
+          <a class="hamburgerNav__link -phone" href="tel:07085407701">
+          <i class="fas fa-phone whiteIcon -hamburger"></i>  
+          070-8540-7701
+          </a>
+      </li>
+      <li class="hamburgerNav__item -line">
+          <a class="hamburgerNav__link-line" href="https://lin.ee/zRgydg8" target="_blank" ral="noopener"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+      </li>
+      </ul>
+    </nav>
+
     </div>
 
   </header>
   <nav class="headerUnder__navWrap">
     <ul class="headerUnder__nav">
     <li class="headerUnder__navList">
-      <a href="#flow" class="headerUnder__navItem">施術の流れ</a>
+      <a href="<?php echo esc_url(home_url('#flow'));?>" class="headerUnder__navItem">施術の流れ</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="#voices" class="headerUnder__navItem">お客様の声</a>
+      <a href=" <?php echo esc_url(home_url('#voices'));?>" class="headerUnder__navItem">お客様の声</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="#price" class="headerUnder__navItem">施術料金</a>
+      <a href="<?php echo esc_url(home_url('#price')); ?>" class="headerUnder__navItem">施術料金</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="" class="headerUnder__navItem">ブログ</a>
+      <a href="<?php echo esc_url(home_url('blog'));?>/" class="headerUnder__navItem">ブログ</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="#access" class="headerUnder__navItem">アクセス</a>
+      <a href="<?php echo esc_url(home_url('#access'));?>" class="headerUnder__navItem">アクセス</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="#contact" class="headerUnder__navItem">お問い合わせ</a>
+      <a href="<?php echo esc_url(home_url('#contact')); ?>" class="headerUnder__navItem">お問い合わせ</a>
     </li>
     </ul>
   </nav>

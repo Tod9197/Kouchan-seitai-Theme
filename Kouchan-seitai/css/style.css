@@ -1,5 +1,5 @@
 /* メインビジュアル */
-.mainViusal {
+.mainVisual {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -9,23 +9,120 @@
     #fce3c5,
     #fbd1a7 30%,
     #f9b89c 60%,
-    #f4b8a4 80%,
-    /* ピンクをオレンジ寄りに */ #e8c5a4 /* 最後の色も少しオレンジ寄りに調整 */
+    #f4b8a4 80%
   );
 }
-.mainViusal::after {
+.mainVisual__titleFlex {
+  display: flex;
+}
+.mainVisual__titleWrap {
+  width: 50%;
+  display: block;
+}
+.mainVisual__imgWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.mainVisual__ballon {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 25rem;
+  margin: 1.5rem 0;
+  padding: 7px 5px;
+  height: 10rem;
+  color: #555;
+  background: #fff;
+  border-radius: 15px;
+}
+.mainVisual__ballon:before {
   content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #fff;
+}
+.mainVisual__ballonText {
+  font-size: 1.6rem;
+  padding: 1rem;
+  line-height: 1.6;
+}
+.mainVisual__imgBox {
+  position: relative;
+  display: inline-block;
+}
+.mainVisual__img {
+  display: inline-block;
   width: 30rem;
   height: 30rem;
-  background: url(../img/kouchan-01.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
   border: 2px solid #ff914d;
+  margin-left: auto;
+  aspect-ratio: 100/100;
+  object-fit: cover;
+  position: relative;
+}
+.mainVisual__imgBox::after {
   position: absolute;
-  top: 20rem;
-  right: 5rem;
+  display: block;
+  content: "代表 西垣宏亮";
+  font-size: 1.6rem;
+  color: #000;
+  left: 50%;
+  bottom: -3rem;
+  transform: translateX(-50%);
+  letter-spacing: 0.1em;
+}
+.mainVisual__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainVisual__title {
+  font-size: 3rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 2px #fff;
+  margin-bottom: 3rem;
+}
+.mainVisual__text {
+  color: #333;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+.mainVisual__tagFlex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: absolute;
+  left: 5rem;
+  bottom: 1rem;
+}
+.mainVisual__tagItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 11rem;
+  height: 11rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #e0f4fc, #a3d4f7 40%, #79bce3 70%);
+}
+.mainVisual__tagItem {
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
 }
 
 /* 当院について */
@@ -945,6 +1042,24 @@
 
 /* レスポンシブ */
 @media screen and (max-width: 1024px) {
+  /* メインビジュアル */
+  .mainVisual__imgWrap {
+    flex-direction: column-reverse;
+  }
+  .mainVisual__imgBox {
+    margin: auto;
+  }
+  .mainVisual__ballon {
+    margin: auto;
+    margin-top: 6rem;
+  }
+  .mainVisual__ballon::before {
+    top: -10%;
+    right: 50%;
+    transform: translateX(50%) rotate(-90deg);
+    border-left: 15px solid #fff;
+  }
+
   .voicesList {
     grid-template-columns: repeat(2, 1fr);
     gap: 15rem 0;
@@ -973,6 +1088,44 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* メインビジュアル */
+  .mainVisual {
+    padding: 0;
+  }
+  .mainVisual__titleFlex {
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+  }
+  .mainVisual__titleWrap {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .mainVisual__title {
+    font-size: 2.4rem;
+  }
+  .mainVisual__text {
+    font-size: 1.6rem;
+  }
+  .mainVisual__imgWrap {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .mainVisual__tagFlex {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mainVisual__ballon {
+    max-width: 30rem;
+    height: 8rem;
+  }
+  .mainVisual__tagItem {
+    font-size: 1.4rem;
+    width: 9rem;
+    height: 9rem;
+    padding: 0.5rem;
+  }
+
   .about,
   .counseling,
   .features,
@@ -1168,6 +1321,42 @@
   }
 }
 @media screen and (max-width: 480px) {
+  /* メインビジュアル */
+  .mainVisual {
+    padding: 10rem 0 5rem 0;
+  }
+  .mainVisual__title {
+    font-size: 2rem;
+  }
+  .mainVisual__text {
+    font-size: 1.4rem;
+  }
+  .mainVisual__imgWrap {
+    /* margin-bottom: 0; */
+  }
+  .mainVisual__img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .mainVisual__imgBox::after {
+    font-size: 1.4rem;
+  }
+  .mainVisual__ballon {
+    height: 7rem;
+  }
+  .mainVisual__ballonText {
+    font-size: 1.4rem;
+  }
+  .mainVisual__tagFlex {
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 1rem;
+  }
+  .mainVisual__tagItem {
+    font-size: 1.2rem;
+    width: 7rem;
+    height: 7rem;
+    margin-right: 0;
+  }
   .aboutTitle__sub,
   .counselingTitle__sub,
   .featuresTitle__sub,

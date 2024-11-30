@@ -43,6 +43,24 @@
     1px 1px 0 #fff;
   margin-right: 3rem;
 }
+.footerPhone {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  font-size: 2rem;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+.whiteIcon.-footer {
+  font-size: 1.6rem;
+  padding: 1rem;
+  text-shadow: none;
+}
+.footerPhone:hover {
+  color: #ff914d;
+}
 .footerCopy {
   display: block;
   font-size: 1.4rem;
@@ -52,4 +70,47 @@
   background: linear-gradient(to bottom, #ffd79a, #ffecb5);
   text-align: center;
   padding: 3rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .footerLogo {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerInner {
+    flex-direction: column;
+  }
+  .footerLogo {
+    font-size: 2.4rem;
+  }
+  .footerLogo__img {
+    width: 7rem;
+  }
+  .footerAdress {
+    font-size: 1.6rem;
+  }
+  .footerPhone {
+    font-size: 1.6rem;
+  }
+  .whiteIcon.-footer {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footerLogo {
+    font-size: 2rem;
+  }
+  .footerLogo__img {
+    width: 5.5rem;
+  }
+  .footerAdress {
+    font-size: 1.4rem;
+  }
+  .footerPhone {
+    font-size: 1.4rem;
+  }
+  .whiteIcon.-footer {
+    padding: 0.7rem;
+  }
 }
