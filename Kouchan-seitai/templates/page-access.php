@@ -7,7 +7,6 @@
  */
 
 get_header(); ?>
-
 <section class="accessDetail">
   <div class="inner">
   <div class="accessDetail__titleWrap">

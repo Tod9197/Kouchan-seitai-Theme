@@ -4,9 +4,9 @@
   <div class="inner">
     <?php if(have_posts()) : while(have_posts()) :the_post();?>
       <div class="singleVoices__content">
-        <div class="accessDetail__titleWrap">
-          <p class="accessDetail__titleSub">VOICES</p>
-          <h2 class="accessDetail__title">お客様の声</h2>
+        <div class="singleVoices__titleWrap">
+          <p class="singleVoices__titleSub">VOICES</p>
+          <h2 class="singleVoices__title">お客様の声</h2>
         </div>
         <h2 class="singleVoices__subTitle"><?php the_title(); ?></h2>
         <?php  
@@ -19,9 +19,9 @@
         </div>
         <?php endif; ?>
       </div>
-      <div class="singleVoices__content">
+      <div class="singleVoices__contentText">
           <?php the_content(); ?>
-        </div>
+      </div>
     <?php endwhile; endif; ?>
   </div>
 </section>

@@ -58,14 +58,16 @@ function custom_post_type_voices(){
     'not_found' => 'お客様の声が見つかりません',
     'not_found_in_trash' => 'ゴミ箱にお客様の声はありません'
   );
-
   $args = array(
     'labels' => $labels,
     'public' => true,
     'publicly_queryable' => true,
     'show_in_menu' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'voices'),
+    'rewrite' => [
+            'slug' => 'voices', // カスタム投稿タイプのスラッグ
+            'with_front' => false, // 前にベーススラッグを付けるかどうか
+        ],
     'capability_type' => 'post',
     'has_archive' => true,
     'hierarchical' => false,
@@ -74,13 +76,20 @@ function custom_post_type_voices(){
   );
   register_post_type('voices',$args);
 
-  // カテゴリーとタグを追加
+// カテゴリーとタグを追加
   register_taxonomy_for_object_type('category','voices');
   register_taxonomy_for_object_type('post_tag','voices');
 }
 
+function set_custom_post_type_archive_posts_per_page($query){
+  if(!is_admin()  && $query->is_main_query() && is_post_type_archive('voices')){
+    $query->set('posts_per_page',1);
+  }
+}
+
 add_action('after_setup_theme','mytheme_setup');
 add_action('init','custom_post_type_voices');
+add_action('pre_get_posts','set_custom_post_type_archive_posts_per_page');
 
 ?>
 

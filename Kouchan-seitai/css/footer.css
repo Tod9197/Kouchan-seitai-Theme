@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: 20rem;
-  padding: 2rem 0 5rem;
+  padding: 2rem 0 7rem;
   background: linear-gradient(to bottom, #ffd79a, #ffecb5);
 }
 .footerInner {
@@ -43,6 +43,20 @@
     1px 1px 0 #fff;
   margin-right: 3rem;
 }
+
+.footerLine {
+  display: block;
+  width: 15rem;
+  height: auto;
+  margin-top: 2rem;
+}
+.footerLine img {
+  border-radius: 8px;
+}
+.footerLine:hover {
+  opacity: 0.8;
+}
+
 .footerPhone {
   font-family: "Noto Serif JP", serif;
   font-style: normal;
@@ -98,6 +112,13 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .footer {
+    height: 17rem;
+  }
+  .footerInner {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
   .footerLogo {
     font-size: 2rem;
   }
@@ -107,10 +128,17 @@
   .footerAdress {
     font-size: 1.4rem;
   }
+  .footerLine {
+    width: 10rem;
+  }
   .footerPhone {
     font-size: 1.4rem;
   }
   .whiteIcon.-footer {
     padding: 0.7rem;
+  }
+  .footerCopy {
+    font-size: 1.2rem;
+    padding: 2rem 0;
   }
 }

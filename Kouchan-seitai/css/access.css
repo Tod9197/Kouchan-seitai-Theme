@@ -3,7 +3,8 @@
   padding: 10rem 0;
 }
 .accessTitle {
-  font-family: "Noto Serif JP", serif;
+  color: #333;
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -94,7 +95,7 @@
 
 /* アクセス詳細ページ */
 .accessDetail {
-  padding: 20rem 0;
+  padding: 20rem 0 15rem;
 }
 .accessDetail__text {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -106,7 +107,8 @@
   margin-bottom: 3rem;
 }
 .accessDetail__title {
-  font-family: "Noto Serif JP", serif;
+  color: #333;
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -223,8 +225,9 @@
   color: #333;
   background-color: #fff;
   border: 5px double #ff8c00;
-  top: -3rem;
-  left: -3rem;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .accessDetail__wayImg {
   width: 100%;
@@ -239,6 +242,12 @@
 }
 
 /* レスポンシブ */
+@media screen and (max-width: 1024px) {
+  .accessDetail__wayList {
+    column-gap: 4rem;
+    row-gap: 7rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .access {
     padding: 5rem 0;
@@ -246,16 +255,32 @@
   .accessTitle__wrap {
     padding-top: 3rem;
   }
-  .accessTitle__sub {
+  .accessTitle__sub,
+  .accessDetail__titleSub {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
-  .accessTitle__wrap::after {
+  .accessTitle__wrap::after,
+  .accessDetail__titleWrap::after {
     width: 20rem;
   }
-  .accessTitle {
+  .accessTitle,
+  .accessDetail__title {
     font-size: 2rem;
   }
+  .accessDetail {
+    padding: 10rem 0 5rem;
+  }
+  .accessDetail__title {
+    margin-bottom: 3rem;
+  }
+  .accessDetail__wayWrap {
+    padding: 3rem 0 8rem;
+  }
+  .accessDetail__wayTitle {
+    font-size: 2.4rem;
+  }
+
   .accessList__link {
     width: 60%;
     font-size: 1.6rem;
@@ -264,30 +289,75 @@
   .accessList__item {
     font-size: 1.6rem;
   }
+  .accessDetail__wayList {
+    column-gap: 3rem;
+    row-gap: 5rem;
+  }
+  .accessDetail__wayItem::before {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    top: -3rem;
+  }
+  .accessDetail__text.-second {
+    font-size: 1.6rem;
+  }
 }
 @media screen and (max-width: 480px) {
-  .accessTitle__sub {
-    font-size: 2.5rem;
+  .accessTitle__sub,
+  .accessDetail__titleSub {
+    font-size: 2.4rem;
   }
-  .accessTitle__wrap::after {
-    width: 15rem;
+  .accessTitle__wrap::after,
+  .accessDetail__titleWrap::after {
+    width: 10rem;
   }
-  .accessTitle {
+  .accessTitle,
+  .accessDetail__title {
     font-size: 1.6rem;
     margin-bottom: 3rem;
   }
-  .accessText {
+  .accessText,
+  .accessDetail__text {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
+
   .accessList {
     margin: 3rem 0 3rem;
   }
   .accessList__link {
-    width: 70%;
+    width: 75%;
     font-size: 1.2rem;
+    padding: 2rem 2rem;
   }
   .accessList__item {
     font-size: 1.4rem;
+  }
+  .accessDetail__wayWrap {
+    padding: 3rem 0 8rem;
+  }
+  .accessDetail__wayTitle {
+    font-size: 1.8rem;
+  }
+  .accessDetail__wayList {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 5rem;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+  }
+  .accessDetail__wayItem::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+    top: -2rem;
+  }
+  .accessDetail__address {
+    font-size: 1.4rem;
+  }
+  .accessDetail__text.-second {
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
   }
 }

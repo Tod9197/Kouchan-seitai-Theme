@@ -1,3 +1,48 @@
+/* お客様の声一覧ページ */
+.archiveVoices {
+  padding: 20rem 0;
+}
+.archiveVoices__titleWrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.archiveVoices__titleWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.archiveVoices__titleWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.archiveVoices__titleSub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.archiveVoices__title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
+
 /* お客様の声個別ページ */
 .singleVoices {
   padding: 20rem 0;
@@ -26,21 +71,31 @@
   height: 5px;
 }
 .singleVoices__titleSub {
-  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 4rem;
   color: #ff914d;
   margin-bottom: 1rem;
   position: relative;
 }
+.singleVoices__title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 10rem;
+  position: relative;
+  z-index: -1;
+}
 .singleVoices__subTitle {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 500;
   color: #ff914d;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   position: relative;
 }
-.singleVoices__content {
+.singleVoices__contentText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -54,4 +109,62 @@
 }
 .singleVoices__youtube iframe:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .singleVoices,
+  .archiveVoices {
+    padding: 10rem 0 5rem;
+  }
+  .singleVoices__titleWrap::after,
+  .archiveVoices__titleWrap::after {
+    width: 20rem;
+  }
+  .singleVoices__titleSub,
+  .archiveVoices__titleSub {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .singleVoices__title,
+  .archiveVoices__title {
+    font-size: 2rem;
+    margin-bottom: 7rem;
+  }
+  .singleVoices__subTitle,
+  .archiveVoices__subTitle {
+    font-size: 2rem;
+  }
+  .singleVoices__youtube iframe {
+    height: 40rem;
+    margin-bottom: 3rem;
+  }
+  .singleVoices__contentText {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .singleVoices__titleWrap::after,
+  .archiveVoices__titleWrap::after {
+    width: 15rem;
+  }
+  .singleVoices__title,
+  .archiveVoices__title {
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+  }
+  .singleVoices__titleSub,
+  .archiveVoices__titleSub {
+    font-size: 2.4rem;
+  }
+  .singleVoices__subTitle,
+  .archiveVoices__subTitle {
+    font-size: 1.4rem;
+  }
+  .singleVoices__youtube iframe {
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
+  .singleVoices__contentText {
+    font-size: 1.4rem;
+  }
 }

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php wp_title('|',true, 'right'); bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/base.css')); ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/style.css')); ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/header.css')); ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/footer.css')); ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/access.css')); ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/voices.css')); ?>" type="text/css">
-  <script src="<?php echo esc_url(get_theme_file_uri('/js/main.js')); ?>"></script>
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/base.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/base.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/style.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/style.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/header.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/header.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/footer.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/footer.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/access.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/access.css')); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/voices.css')); ?>?v=<?php echo filemtime(get_theme_file_path('/css/voices.css')); ?>" type="text/css">
+  <script src="<?php echo esc_url(get_theme_file_uri('/js/main.js')); ?>?v=<?php echo filemtime(get_theme_file_path('/js/main.js')); ?>"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <?php wp_head(); ?>

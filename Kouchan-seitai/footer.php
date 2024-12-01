@@ -22,7 +22,8 @@
           <i class="fas fa-phone whiteIcon -footer"></i>  
           070-8540-7701
     </a>
-    </div>
+    <a class="footerLine" href="https://lin.ee/zRgydg8" target="_blank" ral="noopener"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0">
+  </a>
   </div>
 </footer>
 <small class="footerCopy">©こーちゃん整体院 All rights reserved.</small>
