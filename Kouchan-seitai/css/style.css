@@ -1413,6 +1413,9 @@
     width: 10rem;
   }
   /* 当院について */
+  .aboutTitle__wrap {
+    width: 100%;
+  }
   .aboutTitle__img {
     width: 95%;
     margin-top: 0;

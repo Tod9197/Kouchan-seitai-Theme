@@ -33,7 +33,8 @@
   position: relative;
 }
 .archiveVoices__title {
-  font-family: "Noto Serif JP", serif;
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  color: #333;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -41,6 +42,86 @@
   margin-bottom: 10rem;
   position: relative;
   z-index: -1;
+}
+.archiveVoices__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15rem 0;
+}
+.archiveVoices__item {
+  width: 100%;
+  height: 30rem;
+  transition: all 0.3s;
+}
+.archiveVoices__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.archiveVoices__itemLink {
+  display: block;
+  height: 100%;
+  border: 1px solid #ff8c00;
+  padding-bottom: 11rem;
+}
+.archiveVoices__itemText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  padding: 1.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.archiveVoices__itemText.-second {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  background-color: #ff914d;
+  margin-bottom: 2rem;
+}
+.archiveVoices__itemText.-second:hover {
+  opacity: 0.7;
+}
+/* ページネーション */
+.archiveVoices__Wrap {
+  position: relative;
+  padding-bottom: 10rem;
+}
+.archiveVoices__Pagination {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.archiveVoices__Pagination .page-numbers {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #ddd;
+  margin-right: 1rem;
+}
+.archiveVoices__Pagination .page-numbers:hover {
+  color: #fff;
+  background-color: #ff8c00;
+}
+.archiveVoices__Pagination .page-numbers.current {
+  color: #000;
+  background-color: #ff8c00;
+  border: none;
+}
+.archiveVoices__Pagination .page-numbers.current:hover {
+  opacity: 1;
 }
 
 /* お客様の声個別ページ */
@@ -101,6 +182,16 @@
   font-weight: 500;
   margin-bottom: 3rem;
 }
+.singleVoices__contentText img {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.singleVoices__contentText p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 .singleVoices__youtube iframe {
   display: block;
   width: 100%;
@@ -110,10 +201,14 @@
 .singleVoices__youtube iframe:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 1024px) {
+  .archiveVoices__item {
+    height: 20rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  .singleVoices,
-  .archiveVoices {
+  .singleVoices {
     padding: 10rem 0 5rem;
   }
   .singleVoices__titleWrap::after,
@@ -141,6 +236,21 @@
   .singleVoices__contentText {
     font-size: 1.6rem;
   }
+  .singleVoices__contentText p {
+    font-size: 1.6rem;
+  }
+  .archiveVoices__itemLink {
+    padding-bottom: 10rem;
+  }
+  .archiveVoices__item {
+    height: 15rem;
+  }
+  .archiveVoices__itemText {
+    font-size: 1.4rem;
+  }
+  .archiveVoices__itemText.-second {
+    font-size: 1.4rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .singleVoices__titleWrap::after,
@@ -165,6 +275,9 @@
     margin-bottom: 2rem;
   }
   .singleVoices__contentText {
+    font-size: 1.4rem;
+  }
+  .singleVoices__contentText p {
     font-size: 1.4rem;
   }
 }
