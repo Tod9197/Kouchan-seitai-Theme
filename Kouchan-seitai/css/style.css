@@ -948,8 +948,27 @@
 
 /* お客様の声 */
 .voices {
-  padding: 10rem 0;
+  padding: 10rem 0 25rem;
+  position: relative;
 }
+.archiveVoices__page {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 3rem;
+  background: linear-gradient(45deg, #e0f4fc, #a3d4f7 40%, #79bce3 70%);
+  border: 1p solid #eee;
+}
+.archiveVoices__pageLink {
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+}
+.archiveVoices__page:hover {
+  opacity: 0.7;
+}
+
 .voicesTitle {
   color: #333;
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -1001,22 +1020,18 @@
 .voicesList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 0;
+  gap: 15rem 0;
 }
 .voicesList__item {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   transition: all 0.3s;
-  /* overflow: hidden; */
 }
 .voicesList__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
-}
-.voicesList__item:hover img {
-  /* transform: scale(1.1); */
 }
 .voicesList__itemLink {
   display: block;
@@ -1146,7 +1161,7 @@
     padding: 5rem 0;
   }
   .voices {
-    padding: 5rem 0 15rem 0;
+    padding: 5rem 0 23rem 0;
   }
   .aboutTitle__wrap,
   .counselingTitle__wrap,
@@ -1279,8 +1294,26 @@
   }
   /* お客様の声 */
   .voicesList {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12rem 0;
+  }
+  .voicesList__item {
+    height: 20rem;
+  }
+  .voicesList__itemLink {
+    padding-bottom: 10rem;
+  }
+  .voicesList__itemText {
+    font-size: 1.4rem;
+  }
+  .voicesList__itemText.-seocnd {
+    font-size: 1.4rem;
+  }
+  .archiveVoices__page {
+    width: 30%;
+    text-align: center;
+    font-size: 1.6rem;
+    bottom: 1rem;
   }
   /* 代表挨拶 */
   .directorName {
@@ -1492,11 +1525,28 @@
   }
 
   /* お客様の声 */
+  .voicesList__item {
+    height: 12rem;
+  }
+  .voicesList__itemLink {
+    padding-bottom: 9rem;
+  }
   .voicesList__itemText {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
   .voicesList__itemText.-seocnd {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  .voices {
+    padding: 5rem 0 21rem 0;
+  }
+  .archiveVoices__page {
+    width: 50%;
+    text-align: center;
     font-size: 1.4rem;
+    padding: 1.5rem 1.5rem;
   }
 
   /* 代表挨拶 */

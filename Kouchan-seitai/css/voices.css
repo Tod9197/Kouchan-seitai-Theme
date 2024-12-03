@@ -39,7 +39,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   position: relative;
   z-index: -1;
 }
@@ -57,6 +57,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 100/100;
   transition: transform 0.3s;
 }
 .archiveVoices__itemLink {
@@ -64,6 +65,9 @@
   height: 100%;
   border: 1px solid #ff8c00;
   padding-bottom: 11rem;
+}
+.archiveVoices__itemLink:hover {
+  opacity: 0.8;
 }
 .archiveVoices__itemText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
@@ -116,7 +120,7 @@
   background-color: #ff8c00;
 }
 .archiveVoices__Pagination .page-numbers.current {
-  color: #000;
+  color: #fff;
   background-color: #ff8c00;
   border: none;
 }
@@ -164,7 +168,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   position: relative;
   z-index: -1;
 }
@@ -211,6 +215,9 @@
   .singleVoices {
     padding: 10rem 0 5rem;
   }
+  .archiveVoices {
+    padding: 20rem 0 15rem;
+  }
   .singleVoices__titleWrap::after,
   .archiveVoices__titleWrap::after {
     width: 20rem;
@@ -223,7 +230,7 @@
   .singleVoices__title,
   .archiveVoices__title {
     font-size: 2rem;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
   .singleVoices__subTitle,
   .archiveVoices__subTitle {
@@ -251,6 +258,11 @@
   .archiveVoices__itemText.-second {
     font-size: 1.4rem;
   }
+  .archiveVoices__Pagination .page-numbers {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .singleVoices__titleWrap::after,
@@ -260,7 +272,7 @@
   .singleVoices__title,
   .archiveVoices__title {
     font-size: 1.6rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .singleVoices__titleSub,
   .archiveVoices__titleSub {
@@ -279,5 +291,31 @@
   }
   .singleVoices__contentText p {
     font-size: 1.4rem;
+  }
+  .archiveVoices__Wrap {
+    padding-bottom: 7rem;
+  }
+  .archiveVoices__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12rem 0;
+  }
+  .archiveVoices__item {
+    height: 12rem;
+  }
+  .archiveVoices__itemLink {
+    padding-bottom: 9rem;
+  }
+  .archiveVoices__itemText {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .archiveVoices__itemText.-second {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  .archiveVoices__Pagination .page-numbers {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.6rem;
   }
 }

@@ -229,7 +229,7 @@
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = [
       'post_type' => 'voices',
-      'posts_per_page' => 3,
+      'posts_per_page' => 6,
       'order' => 'DESC',
       'paged' => $paged
     ];
@@ -265,7 +265,10 @@
                 <img src="<?php echo esc_url(get_theme_file_uri('img/bg-paper-01.jpg')) ?>" alt="画像なし">
               <?php endif; ?>
 
-              <p class="voicesList__itemText"><?php the_title(); ?></p>
+              <p class="voicesList__itemText"><?php 
+            $title = get_the_title();
+            echo mb_strimwidth($title,0,40,'...');
+            ?></p>
               <p class="voicesList__itemText -seocnd">詳しく見る</p>
             </a>
           </li>
@@ -275,6 +278,9 @@
     <?php else : ?>
       <p>まだ投稿はありません。</p>
     <?php endif; ?>
+    <p class="archiveVoices__page">
+    <a class="archiveVoices__pageLink" href="<?php echo get_post_type_archive_link('voices'); ?>">お客様の声一覧を見る</a>
+  </p>
   </div>
 </section>
 

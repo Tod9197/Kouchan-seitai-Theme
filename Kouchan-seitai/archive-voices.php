@@ -36,14 +36,19 @@
             <img src="<?php echo esc_url(get_theme_file_uri('img/bg-paper-01.jpg')) ?>" alt="画像なし">
           <?php endif; ?>
 
-          <p class="archiveVoices__itemText"><?php the_title(); ?></p>
+          <p class="archiveVoices__itemText">
+            <?php 
+            $title = get_the_title();
+            echo mb_strimwidth($title,0,40,'...');
+            ?>
+          </p>
           <p class="archiveVoices__itemText -second">詳しく見る</p>
         </a>
       </li>
     <?php endwhile; ?>
   </ul>
 <?php else : ?>
-  <p>投稿がありません。</p>
+  <p>まだ投稿がありません。</p>
 <?php endif; ?>
 
   <!-- ページネーション -->
