@@ -1,0 +1,141 @@
+/* 個別ブログページ */
+.singleBlogs {
+  padding-bottom: 20rem;
+}
+.singleBlogs__mv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.singleBlogs__mv::before {
+  position: absolute;
+  content: "";
+  background: url("../img/seitai-10.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  width: 100%;
+  height: 50rem;
+  bottom: 5rem;
+  right: 0;
+}
+.singleBlogs__mvText {
+  position: absolute;
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  background-color: #fff;
+  width: 50%;
+  height: 15rem;
+  bottom: 10rem;
+  left: 0;
+  padding: 1rem;
+  border: 1px solid #ff914d;
+}
+.singleBlogs__mvText::after {
+  position: absolute;
+  content: "ブログ";
+  color: #333;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  left: 1rem;
+  top: 6rem;
+}
+.singleBlogs__content {
+  padding: 10rem 0;
+}
+.singleBlogs__titleWrap {
+  position: relative;
+  padding-top: 5rem;
+  width: 100%;
+}
+.singleBlogs__titleWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.singleBlogs__titleWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+/* .singleBlogs__titleSub {
+  font-family: "Noto Serif JP", serif;
+  font-size: 4rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.singleBlogs__title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: -1;
+} */
+.singleBlogs__subTitle {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #ff914d;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.singleBlogs__imgWrap {
+  width: 100%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.singleBlogs__img {
+  width: 30rem;
+  height: 30rem;
+}
+@media screen and (max-width: 768px) {
+  .singleBlogs {
+    padding: 10rem 0 5rem;
+  }
+  .singleBlogs__titleWrap::after {
+    width: 20rem;
+  }
+  /* .singleBlogs__titleSub {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .singleBlogs__title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  } */
+  .singleBlogs__subTitle {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .singleBlogs__titleWrap::after {
+    width: 15rem;
+  }
+  /* .singleBlogs__title {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+  .singleBlogs__titleSub {
+    font-size: 2.4rem;
+  } */
+  .singleBlogs__subTitle {
+    font-size: 1.4rem;
+  }
+}
