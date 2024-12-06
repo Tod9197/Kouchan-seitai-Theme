@@ -11,9 +11,9 @@
   position: absolute;
   content: "";
   background: url("../img/seitai-10.jpg");
-  background-position: right;
+  background-position: left;
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.8;
   width: 100%;
   height: 50rem;
   bottom: 5rem;
@@ -22,26 +22,34 @@
 .singleBlogs__mvText {
   position: absolute;
   font-family: "Noto Serif JP", serif;
-  font-size: 4rem;
+  font-size: 3.6rem;
   color: #ff914d;
   background-color: #fff;
   width: 50%;
   height: 15rem;
-  bottom: 10rem;
-  left: 0;
-  padding: 1rem;
-  border: 1px solid #ff914d;
+  bottom: 27rem;
+  right: 0;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.singleBlogs__mvText::before {
+  position: absolute;
+  content: "";
+  background: #ffd79a;
+  width: 80%;
+  height: 2px;
+  top: 5.5rem;
+  left: 2rem;
 }
 .singleBlogs__mvText::after {
   position: absolute;
   content: "ブログ";
   color: #333;
   font-family: "Noto Serif JP", serif;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.8;
-  left: 1rem;
+  left: 2rem;
   top: 6rem;
 }
 .singleBlogs__content {
