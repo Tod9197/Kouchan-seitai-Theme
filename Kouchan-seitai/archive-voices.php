@@ -8,7 +8,7 @@
       <h2 class="archiveVoices__title">お客様の声一覧</h2>
     </div>
 
-   <?php if (have_posts()) : ?>
+  <?php if (have_posts()) : ?>
   <ul class="archiveVoices__list">
     <?php while (have_posts()) : the_post(); ?>
       <li class="archiveVoices__item">

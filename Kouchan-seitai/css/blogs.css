@@ -1,3 +1,85 @@
+/* ブログ一覧ページ */
+.archiveBlogs {
+  padding-bottom: 20rem;
+}
+.archiveBlogs__mv {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20rem 0 10rem;
+}
+.archiveBlogs__mvImg {
+  width: 70%;
+  height: auto;
+  aspect-ratio: 700/400;
+  object-fit: cover;
+}
+.archiveBlogs__mvText {
+  position: absolute;
+  font-family: "Noto Serif JP", serif;
+  font-size: 3.6rem;
+  color: #ff914d;
+  background-color: #fff;
+  width: 50%;
+  height: 15rem;
+  top: 30rem;
+  right: 0;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.archiveBlogs__mvText::before {
+  position: absolute;
+  content: "";
+  background: #ffd79a;
+  width: 80%;
+  height: 2px;
+  top: 5.5rem;
+  left: 2rem;
+}
+.archiveBlogs__mvText::after {
+  position: absolute;
+  content: "ブログ一覧";
+  color: #333;
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  left: 2rem;
+  top: 6rem;
+}
+.archiveBlogs__titleWrap {
+  position: relative;
+  padding-top: 10rem;
+  width: 100%;
+}
+.archiveBlogs__titleWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffd79a;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+}
+.archiveBlogs__titleWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ff914d;
+  top: 0;
+  width: 30rem;
+  height: 5px;
+}
+.archiveBlogs__subTitle {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #ff914d;
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
 /* 個別ブログページ */
 .singleBlogs {
   padding-bottom: 20rem;
@@ -5,20 +87,16 @@
 .singleBlogs__mv {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding-top: 20rem;
 }
-.singleBlogs__mv::before {
-  position: absolute;
-  content: "";
-  background: url("../img/seitai-10.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  width: 100%;
-  height: 50rem;
-  bottom: 5rem;
-  right: 0;
+.singleBlogs__mvImg {
+  width: 70%;
+  height: auto;
+  aspect-ratio: 700/400;
+  object-fit: cover;
 }
+
 .singleBlogs__mvText {
   position: absolute;
   font-family: "Noto Serif JP", serif;
@@ -27,7 +105,7 @@
   background-color: #fff;
   width: 50%;
   height: 15rem;
-  bottom: 27rem;
+  top: 30rem;
   right: 0;
   padding: 1rem 1rem 1rem 2rem;
 }
@@ -52,8 +130,27 @@
   left: 2rem;
   top: 6rem;
 }
+.singleblogs__inner {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
 .singleBlogs__content {
   padding: 10rem 0;
+}
+.singleBlogs__content img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 400/300;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.singleBlogs__content p {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  color: #333;
+  line-height: 1.6;
 }
 .singleBlogs__titleWrap {
   position: relative;
@@ -78,72 +175,138 @@
   width: 30rem;
   height: 5px;
 }
-/* .singleBlogs__titleSub {
-  font-family: "Noto Serif JP", serif;
-  font-size: 4rem;
-  color: #ff914d;
-  margin-bottom: 1rem;
-  position: relative;
-}
-.singleBlogs__title {
-  font-family: "Noto Serif JP", serif;
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  line-height: 1.8;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: -1;
-} */
 .singleBlogs__subTitle {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 2.4rem;
   font-weight: 500;
   color: #ff914d;
-  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
   position: relative;
 }
 .singleBlogs__imgWrap {
   width: 100%;
   margin: auto;
-  margin-top: 10rem;
 }
 
 .singleBlogs__img {
   width: 30rem;
   height: 30rem;
 }
+@media screen and (max-width: 1024px) {
+  .singleBlogs__mvText,
+  .archiveBlogs__mvText {
+    font-size: 3rem;
+    height: 12rem;
+    top: 24rem;
+  }
+  .singleBlogs__mvText::after,
+  .archiveBlogs__mvText::after {
+    font-size: 1.8rem;
+    top: 5.5rem;
+  }
+  .singleBlogs__mvText::before,
+  .archiveBlogs__mvText::before {
+    top: 5rem;
+  }
+  .singleblogs__inner {
+    max-width: 700px;
+  }
+  .singleBlogs__titleWrap::after,
+  .archiveBlogs__titleWrap::after {
+    width: 25rem;
+  }
+  .singleblogs__inner {
+    max-width: 650px;
+  }
+}
 @media screen and (max-width: 768px) {
-  .singleBlogs {
+  .singleBlogs,
+  .archiveBlogs {
     padding: 10rem 0 5rem;
   }
-  .singleBlogs__titleWrap::after {
+  .singleBlogs__mv,
+  .archiveBlogs__mv {
+    padding-top: 3rem;
+  }
+  .singleBlogs__mvText,
+  .archiveBlogs__mvText {
+    font-size: 2.4rem;
+    width: 45%;
+    height: 10rem;
+    top: 7rem;
+  }
+  .singleBlogs__mvText::before,
+  .archiveBlogs__mvText::before {
+    top: 4.5rem;
+  }
+  .singleBlogs__mvText::after,
+  .archiveBlogs__mvText::after {
+    font-size: 1.4rem;
+    top: 5rem;
+  }
+  .singleBlogs__content {
+    padding: 5rem 0;
+  }
+  .singleBlogs__titleWrap::after,
+  .archiveBlogs__titleWrap::after {
     width: 20rem;
   }
-  /* .singleBlogs__titleSub {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .singleBlogs__title {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  } */
   .singleBlogs__subTitle {
     font-size: 2rem;
+  }
+  .singleblogs__inner {
+    max-width: 550px;
+  }
+  .singleBlogs__content img {
+    margin-bottom: 0;
+  }
+  .singleBlogs__content p {
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .singleBlogs__titleWrap::after {
-    width: 15rem;
+  .singleBlogs,
+  .archiveBlogs {
+    padding: 5rem 0 5rem;
   }
-  /* .singleBlogs__title {
-    font-size: 1.6rem;
+  .singleBlogs__titleWrap::after,
+  .archiveBlogs__titleWrap::after {
+    width: 10rem;
+  }
+  .singleBlogs__subTitle {
+    font-size: 1.4rem;
     margin-bottom: 3rem;
   }
-  .singleBlogs__titleSub {
-    font-size: 2.4rem;
-  } */
-  .singleBlogs__subTitle {
+  .singleBlogs__mvText,
+  .archiveBlogs__mvText {
+    font-size: 2.2rem;
+    width: 55%;
+    height: 7rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    top: 10rem;
+  }
+  .singleBlogs__mv::before,
+  .archiveBlogs__mv::before {
+    height: 35rem;
+  }
+  .singleBlogs__mvText::after,
+  .archiveBlogs__mvText::after {
+    font-size: 1.4rem;
+    top: 4.5rem;
+    left: 1.5rem;
+  }
+  .singleBlogs__mvText::before,
+  .archiveBlogs__mvText::before {
+    top: 4rem;
+    left: 1.5rem;
+  }
+  .singleBlogs__mvImg,
+  .archiveBlogs__mvImg {
+    width: 100%;
+    aspect-ratio: 700/500;
+  }
+  .singleBlogs__content p {
     font-size: 1.4rem;
   }
 }
