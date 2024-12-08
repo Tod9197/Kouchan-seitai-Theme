@@ -11,7 +11,7 @@
         <div class="singleBlogs__titleWrap">
         <h2 class="singleBlogs__subTitle"><?php the_title(); ?></h2>
         </div>
-      <div class="singleblogs__inner">
+      <div class="singleBlogs__inner">
         <div class="singleBlogs__imgWrap">
           <?php the_content(); ?>
         </div>

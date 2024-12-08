@@ -79,6 +79,68 @@
   margin-bottom: 5rem;
   position: relative;
 }
+.archiveBlogs__list {
+  display: flex;
+  flex-direction: column;
+}
+.archiveBlogs__item {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ff914d;
+}
+.archiveBlogs__itemLink {
+  width: 100%;
+  display: flex;
+}
+.archiveBlogs__itemLink:hover {
+  opacity: 0.7;
+}
+.archiveBlogs__item img {
+  width: 20rem;
+  height: auto;
+  aspect-ratio: 20/20;
+  object-fit: cover;
+  border: 1px solid #ff914d;
+  border-bottom: none;
+}
+.archiveBlogs__itemWrap {
+  display: block;
+  margin: 1rem 0 0 2rem;
+  position: relative;
+}
+.archiveBlogs__itemTitle {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+.archiveBlogs__itemDate {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1em;
+}
+.archiveBlogs__itemText {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+}
+.archiveBlogs__itemButton {
+  font-size: 1.4rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #ff914d;
+}
 
 /* 個別ブログページ */
 .singleBlogs {
@@ -130,7 +192,8 @@
   left: 2rem;
   top: 6rem;
 }
-.singleblogs__inner {
+.singleBlogs__inner,
+.archiveBlogs__inner {
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -209,14 +272,16 @@
   .archiveBlogs__mvText::before {
     top: 5rem;
   }
-  .singleblogs__inner {
+  .singleBlogs__inner,
+  .archiveBlogs__inner {
     max-width: 700px;
   }
   .singleBlogs__titleWrap::after,
   .archiveBlogs__titleWrap::after {
     width: 25rem;
   }
-  .singleblogs__inner {
+  .singleBlogs__inner,
+  .archiveBlogs__inner {
     max-width: 650px;
   }
 }
@@ -255,7 +320,8 @@
   .singleBlogs__subTitle {
     font-size: 2rem;
   }
-  .singleblogs__inner {
+  .singleBlogs__inner,
+  .archiveBlogs__inner {
     max-width: 550px;
   }
   .singleBlogs__content img {
