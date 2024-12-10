@@ -60,7 +60,22 @@
             </li>
           <?php endwhile; ?>
         </ul>
+        <?php else : ?>
+          <p class="archiveBlogs__itemText -second">まだブログはありません。</p>
       <?php endif; ?>
+
+      <!-- ページネーション -->
+      <div class="archiveBlogs__Pagination">
+        <?php  
+        echo paginate_links([
+          'total' => $wp_query->max_num_pages,
+          'current' => max(1,get_query_var('paged')),
+          'mid_size' =>  1,
+          'prev_text' => '←',
+          'next_text' => '→' 
+        ]);
+        ?>
+      </div>
     </div>
   </div>
 </section>

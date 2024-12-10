@@ -93,6 +93,13 @@
 .archiveVoices__itemText.-second:hover {
   opacity: 0.7;
 }
+.archiveVoices__itemText.-third {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
 /* ページネーション */
 .archiveVoices__Wrap {
   position: relative;
@@ -263,6 +270,9 @@
     height: 2.5rem;
     font-size: 1.8rem;
   }
+  .archiveVoices__itemText.-third {
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .singleVoices__titleWrap::after,
@@ -316,6 +326,9 @@
   .archiveVoices__Pagination .page-numbers {
     width: 2rem;
     height: 2rem;
+    font-size: 1.6rem;
+  }
+  .archiveVoices__itemText.-third {
     font-size: 1.6rem;
   }
 }

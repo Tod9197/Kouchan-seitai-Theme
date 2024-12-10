@@ -125,7 +125,12 @@ function set_custom_post_type_archive_posts_per_page($query){
   if(!is_admin()  && $query->is_main_query() && is_post_type_archive('voices')){
     $query->set('posts_per_page',12);
   }
+  if(is_post_type_archive('blogs')){
+    $query->set('posts_per_page',1);
+  }
 }
+
+
 
 add_action('after_setup_theme','mytheme_setup');
 add_action('init','custom_post_type_voices');

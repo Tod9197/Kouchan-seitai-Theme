@@ -48,7 +48,7 @@
     <?php endwhile; ?>
   </ul>
 <?php else : ?>
-  <p>まだ投稿がありません。</p>
+  <p class="archiveVoices__itemText -third">まだ投稿がありません。</p>
 <?php endif; ?>
 
   <!-- ページネーション -->
