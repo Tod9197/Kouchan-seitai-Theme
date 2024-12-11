@@ -60,7 +60,7 @@
       <a href="<?php echo esc_url(home_url('#price'));?>" class="hamburgerNav__link">施術料金</a>
       </li>
       <li class="hamburgerNav__item">
-      <a href="<?php echo esc_url(home_url('/blog'));?>" class="hamburgerNav__link">ブログ</a>
+      <a href="<?php echo esc_url(get_post_type_archive_link('blogs')); ?>" class="hamburgerNav__link">ブログ</a>
       </li>
       <li class="hamburgerNav__item">
       <a href="<?php echo esc_url(home_url('#access'));?>" class="hamburgerNav__link">アクセス</a>
@@ -95,7 +95,7 @@
       <a href="<?php echo esc_url(home_url('#price')); ?>" class="headerUnder__navItem">施術料金</a>
     </li>
     <li class="headerUnder__navList">
-      <a href="<?php echo esc_url(home_url('blog'));?>/" class="headerUnder__navItem">ブログ</a>
+      <a href="<?php echo esc_url(get_post_type_archive_link('blogs')); ?>" class="headerUnder__navItem">ブログ</a>
     </li>
     <li class="headerUnder__navList">
       <a href="<?php echo esc_url(home_url('#access'));?>" class="headerUnder__navItem">アクセス</a>

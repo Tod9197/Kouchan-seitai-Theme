@@ -15,6 +15,10 @@
         <div class="singleBlogs__imgWrap">
           <?php the_content(); ?>
         </div>
+
+        <div class="singleBlogs__BackToArchive">
+          <a class="singleBlogs__archiveLink" href="<?php echo esc_url(get_post_type_archive_link('blogs')); ?>">ブログ一覧へ戻る</a>
+        </div>
       </div>
       </div>
     <?php endwhile; endif; ?>

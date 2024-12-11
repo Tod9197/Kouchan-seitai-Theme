@@ -212,6 +212,7 @@
 .singleVoices__youtube iframe:hover {
   opacity: 0.8;
 }
+
 @media screen and (max-width: 1024px) {
   .archiveVoices__item {
     height: 20rem;

@@ -182,7 +182,7 @@
 }
 /* 個別ブログページ */
 .singleBlogs {
-  padding-bottom: 20rem;
+  /* padding-bottom: 20rem; */
 }
 .singleBlogs__mv {
   position: relative;
@@ -237,7 +237,7 @@
   margin: auto;
 }
 .singleBlogs__content {
-  padding: 10rem 0;
+  padding: 10rem 0 5rem;
 }
 .singleBlogs__content img {
   width: 100%;
@@ -249,7 +249,7 @@
 }
 .singleBlogs__content p {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #333;
   line-height: 1.6;
 }
@@ -292,6 +292,24 @@
 .singleBlogs__img {
   width: 30rem;
   height: 30rem;
+}
+.singleBlogs__BackToArchive {
+  width: 30%;
+  display: block;
+  font-size: 1.8rem;
+  padding: 2rem 3rem;
+  margin: auto;
+  margin-top: 20rem;
+  text-align: center;
+  background: linear-gradient(45deg, #e0f4fc, #a3d4f7 40%, #79bce3 70%);
+  border: 1p solid #eee;
+}
+.singleBlogs__archiveLink {
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+}
+.singleBlogs__archiveLink:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1024px) {
@@ -359,7 +377,7 @@
     top: 5rem;
   }
   .singleBlogs__content {
-    padding: 5rem 0;
+    padding: 5rem 0 0;
   }
   .singleBlogs__titleWrap::after,
   .archiveBlogs__titleWrap::after {
@@ -372,9 +390,7 @@
   .archiveBlogs__inner {
     max-width: 550px;
   }
-  .singleBlogs__content img {
-    margin-bottom: 0;
-  }
+
   .singleBlogs__content p {
     font-size: 1.6rem;
   }
@@ -393,6 +409,10 @@
     height: 2.5rem;
     font-size: 1.8rem;
   }
+  .singleBlogs__BackToArchive {
+    font-size: 1.6rem;
+    margin-top: 15rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .archiveBlogs__mv {
@@ -404,9 +424,11 @@
   .archiveBlogs__subTitle {
     font-size: 2rem;
   }
-  .singleBlogs,
   .archiveBlogs {
     padding: 5rem 0 5rem;
+  }
+  .singleBlogs {
+    padding: 5rem 0 3rem;
   }
   .singleBlogs__titleWrap::after,
   .archiveBlogs__titleWrap::after {
@@ -475,5 +497,13 @@
     width: 2rem;
     height: 2rem;
     font-size: 1.6rem;
+  }
+  .singleBlogs__BackToArchive {
+    width: 40%;
+    padding: 1.5rem 3rem;
+    margin-top: 10rem;
+  }
+  .singleBlogs__archiveLink {
+    font-size: 1.4rem;
   }
 }
