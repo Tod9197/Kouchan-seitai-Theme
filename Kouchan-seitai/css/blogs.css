@@ -138,6 +138,7 @@
 .archiveBlogs__itemWrap {
   display: block;
   margin: 1rem 0 0 2rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 .archiveBlogs__itemTitle {
@@ -148,6 +149,12 @@
   margin-bottom: 2rem;
   letter-spacing: 0.1em;
 }
+.archiveBlogs__itemFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
 .archiveBlogs__itemDate {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 1.6rem;
@@ -156,6 +163,17 @@
   margin-bottom: 2rem;
   letter-spacing: 0.1em;
 }
+
+.archiveBlogs__itemCategory {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000;
+  padding: 1rem 2rem;
+  letter-spacing: 0.1em;
+  background: linear-gradient(45deg, #e0f4fc, #a3d4f7 40%, #79bce3 70%);
+}
+
 .archiveBlogs__itemText {
   font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
   font-size: 1.6rem;
@@ -167,8 +185,8 @@
 .archiveBlogs__itemButton {
   font-size: 1.4rem;
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0;
+  bottom: 0.5rem;
   padding: 1rem 2rem;
   color: #fff;
   background-color: #ff914d;
@@ -342,6 +360,7 @@
   }
   .archiveBlogs__itemTitle {
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
   .archiveBlogs__itemDate {
     font-size: 1.4rem;
@@ -352,9 +371,11 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .singleBlogs,
-  .archiveBlogs {
+  .singleBlogs {
     padding: 10rem 0 5rem;
+  }
+  .archiveBlogs {
+    padding: 10rem 0 20rem;
   }
   .singleBlogs__mv,
   .archiveBlogs__mv {
@@ -404,6 +425,10 @@
   .archiveBlogs__itemText.-second {
     font-size: 1.8rem;
   }
+  .archiveBlogs__itemCategory {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+  }
   .archiveBlogs__Pagination .page-numbers {
     width: 2.5rem;
     height: 2.5rem;
@@ -425,7 +450,7 @@
     font-size: 2rem;
   }
   .archiveBlogs {
-    padding: 5rem 0 5rem;
+    padding: 5rem 0 10rem;
   }
   .singleBlogs {
     padding: 5rem 0 3rem;

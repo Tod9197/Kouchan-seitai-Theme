@@ -44,10 +44,24 @@
             echo mb_strimwidth($blog_title,0,40,'...'); 
             ?>
             </p>
+            <div class="archiveBlogs__itemFlex">
             <p class="archiveBlogs__itemDate">
               投稿 :
             <?php the_date('Y/m/d'); ?>
-          </p>
+            </p>
+            <p class="archiveBlogs__itemCategory">
+              <?php  
+              $archiveBlog_categories = get_the_category();
+              if(!empty($archiveBlog_categories)){
+                foreach($archiveBlog_categories as $archiveBlog_category){
+                  echo '<span class="archiveBlogs__categoryName">' . esc_html($archiveBlog_category->name) . '</span>';
+                } 
+              } else {
+                  echo '<span class="archiveBlogs__noCategory">カテゴリーなし</span>';
+                }
+              ?>
+            </p>
+            </div>
           <p class="archiveBlogs__itemText">
             <?php 
             $blog_content = get_the_content();
