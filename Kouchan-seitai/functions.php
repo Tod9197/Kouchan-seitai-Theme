@@ -126,7 +126,7 @@ function set_custom_post_type_archive_posts_per_page($query){
     $query->set('posts_per_page',12);
   }
   if(is_post_type_archive('blogs')){
-    $query->set('posts_per_page',1);
+    $query->set('posts_per_page',5);
   }
 }
 
