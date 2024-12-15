@@ -315,7 +315,6 @@
   width: 30%;
   display: block;
   font-size: 1.8rem;
-  padding: 2rem 3rem;
   margin: auto;
   margin-top: 20rem;
   text-align: center;
@@ -323,6 +322,8 @@
   border: 1p solid #eee;
 }
 .singleBlogs__archiveLink {
+  display: block;
+  padding: 2rem 3rem;
   color: #333;
   text-shadow: 1px 1px 1px #fff;
 }
