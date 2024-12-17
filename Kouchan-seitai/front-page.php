@@ -203,14 +203,14 @@
         <p class="flowList__itemText">問診の結果を元にその人にベストの施術を行います。
 「バキバキしない」「痛くない」
 ので安心して施術を受けていただけます。</p>
-        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-02.jpg')); ?>" alt="問診画像">
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-12.jpg')); ?>" alt="問診画像">
       </li>
       <li class="flowList__item">
         <h3 class="flowList__itemTitle">③セルフケア</h3>
         <p class="flowList__itemText">その人に合ったどこでも簡単にできるセルフケアをお伝えします。</p>
         <p class="flowList__itemText">施術で良くなった身体を維持し、日常生活の身体の
 動かし方を変えることで痛みや不調の根本からの改善を目指します。</p>
-        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-07.jpg')); ?>" alt="問診画像">
+        <img class="flowList__itemImg" src="<?php echo esc_url(get_theme_file_uri('/img/seitai-11.jpg')); ?>" alt="問診画像">
       </li>
     </ul>
   </div>

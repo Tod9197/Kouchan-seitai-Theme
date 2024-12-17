@@ -1621,4 +1621,9 @@
     width: 15rem;
     margin-bottom: 2rem;
   }
+  .flowList__itemImg {
+    aspect-ratio: 400/300;
+    margin-top: 0;
+    object-fit: top;
+  }
 }
